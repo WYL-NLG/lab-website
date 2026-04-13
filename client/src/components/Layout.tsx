@@ -59,7 +59,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 className={`relative px-4 py-2 text-sm font-medium transition-colors duration-300 rounded-lg ${
                   location === item.href
                     ? "text-primary"
-                    : "text-muted-foreground hover:text-foreground hover:bg-[oklch(0_0_0_/_3%)]"
+                    : "text-[oklch(0.45_0.02_260)] hover:text-foreground hover:bg-[oklch(0_0_0_/_3%)]"
                 }`}
               >
                 {item.label}
