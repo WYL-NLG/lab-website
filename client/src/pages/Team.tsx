@@ -23,6 +23,7 @@ const AVATARS: Record<string, string> = {
   "胡忠博": "/avatars/hu-zhongbo.jpg",
   "郝牧青": "/avatars/hao-muqing.jpg",
   "刘洋": "/avatars/liu-yang.jpg",
+  "陆文益": "/avatars/lu-wenyi.jpg",
   "王源龙": "/avatars/wang-yuanlong.jpg",
 };
 

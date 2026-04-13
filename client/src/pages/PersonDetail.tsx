@@ -15,6 +15,7 @@ const AVATARS: Record<string, string> = {
   "胡忠博": "/avatars/hu-zhongbo.jpg",
   "郝牧青": "/avatars/hao-muqing.jpg",
   "刘洋": "/avatars/liu-yang.jpg",
+  "陆文益": "/avatars/lu-wenyi.jpg",
   "王源龙": "/avatars/wang-yuanlong.jpg",
 };
 
@@ -197,10 +198,17 @@ const members: Member[] = [
     name: "陆文益",
     role: "博士研究生",
     category: "phd",
-    email: "wylu@student.ecnu.edu.cn",
-    bio: "研究自然语言处理在金融文档分析中的应用。",
-    education: ["华东师范大学硕士"],
-    research: ["NLP", "金融文档分析"],
+    email: "51274419026@stu.ecnu.edu.cn",
+    bio: "拥有较强的理科学科背景，本科专业为数学与应用数学，获取理学学士学位。自本科毕业起，一直从事数学教学工作，先后在新东方集团和北京中公教育集团任职，工作内容包括在全国15个省会城市以班级形式面授考研数学课程，包括高等数学，线性代数，概率论与数理统计的基础，强化，提高，冲刺各个阶段课程。",
+    education: [
+      "本科专业为数学与应用数学，获取理学学士学位",
+      "硕士阶段学习和修读完成经济学和金融学基本课程，包括高级微观经济学、高级计量经济学、高级宏观经济学、高级国际经济学、西方经济学流派、高阶量化研究方法、高级货币金融学、公司治理、高级国际金融学、证券投资、金融数学等",
+    ],
+    research: ["金融市场", "人工智能与机器学习", "货币与汇率理论"],
+    recentWorks: [
+      { date: "", title: "智能体在科研场景中的应用", content: "基于OpenClaw探索智能体在科研场景中的应用，协助科研团队完成文献调研、数据整理、报告撰写等日常工作，提升团队整体效率" },
+      { date: "", title: "ABM理论与大语言模型融合", content: "系统利用ABM理论与方法，并结合大语言模型的最新进展，探索两者在复杂系统仿真中的融合应用路径" },
+    ],
     publications: [],
   },
   {
