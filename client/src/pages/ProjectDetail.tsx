@@ -29,6 +29,19 @@ const projects = [
     cities: ["旧金山-圣何塞", "纽约", "波士顿", "洛杉矶", "芝加哥", "伦敦", "巴黎", "苏黎世-日内瓦", "法兰克福", "多伦多", "北京", "上海", "深圳", "广州", "杭州", "香港", "新加坡", "东京", "首尔", "悉尼", "墨尔本", "迪拜-阿布扎比"],
     team: ["邵怡蕾", "吴宗翰", "汤傲成"],
     link: "https://www.gftci.org.cn/gaifc",
+    researchTeam: {
+      "研究主管兼总编辑": ["邵怡蕾，华东师范大学上海人工智能金融学院院长、教授"],
+      "首席研究员": [
+        "李真，华东师范大学经济与管理学院教授",
+        "温南夫，华东师范大学上海人工智能金融学院助理研究员",
+      ],
+      "研究员": [
+        "汤傲成，华东师范大学上海人工智能金融学院助理教授",
+        "吴宗翰，华东师范大学上海人工智能金融学院助理教授",
+        "金培振，华东师范大学经济与管理学院副教授",
+        "郁淼淼，华东师范大学统计学院助理教授",
+      ],
+    },
   },
 ];
 
@@ -151,29 +164,31 @@ export default function ProjectDetail() {
               <div className="glass-card rounded-2xl p-8 lg:p-10">
                 <h2 className="text-xl font-display text-foreground mb-6">项目信息</h2>
 
-                <div className="mb-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <Users size={16} className="text-muted-foreground" />
-                    <h3 className="text-sm font-semibold text-foreground">核心成员</h3>
+                {project.researchTeam && (
+                  <div className="pb-6 border-b border-border">
+                    <div className="flex items-center gap-2 mb-4">
+                      <Users size={16} className="text-muted-foreground" />
+                      <h3 className="text-sm font-semibold text-foreground">工作人员和研究人员</h3>
+                    </div>
+                    <div className="space-y-4">
+                      {Object.entries(project.researchTeam).map(([role, members]) => (
+                        <div key={role}>
+                          <h4 className="text-xs font-medium text-primary mb-2">{role}</h4>
+                          <ul className="space-y-1">
+                            {members.map((member, idx) => (
+                              <li key={idx} className="text-xs text-muted-foreground">
+                                {member}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                  <div className="flex flex-wrap gap-2">
-                    {project.team.map((member) => (
-                      <span
-                        key={member}
-                        className="px-3 py-1.5 rounded-lg text-sm"
-                        style={{
-                          backgroundColor: `color-mix(in oklch, ${project.color} 10%, transparent)`,
-                          color: project.color,
-                        }}
-                      >
-                        {member}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+                )}
 
                 {project.cities && project.cities.length > 0 && (
-                  <div className="pt-6 border-t border-border">
+                  <div className="pt-6">
                     <div className="flex items-center gap-2 mb-3">
                       <Globe size={16} className="text-muted-foreground" />
                       <h3 className="text-sm font-semibold text-foreground">覆盖城市</h3>
@@ -192,7 +207,7 @@ export default function ProjectDetail() {
                 )}
 
                 {project.link && (
-                  <div className="mt-8 pt-6 border-t border-border">
+                  <div className="mt-6 pt-6 border-t border-border">
                     <h3 className="text-sm font-semibold text-foreground mb-3">项目链接</h3>
                     <a
                       href={project.link}

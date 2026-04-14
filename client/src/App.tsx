@@ -4,6 +4,7 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import { LanguageProvider } from "./contexts/LanguageContext";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Team from "./pages/Team";
@@ -14,6 +15,8 @@ import PaperDetail from "./pages/PaperDetail";
 import Opportunities from "./pages/Opportunities";
 import OpportunityDetail from "./pages/OpportunityDetail";
 import PersonDetail from "./pages/PersonDetail";
+import News from "./pages/News";
+import NewsDetail from "./pages/NewsDetail";
 import Layout from "./components/Layout";
 
 function Router() {
@@ -30,6 +33,8 @@ function Router() {
         <Route path="/papers/:id" component={PaperDetail} />
         <Route path="/opportunities" component={Opportunities} />
         <Route path="/opportunities/:id" component={OpportunityDetail} />
+        <Route path="/news" component={News} />
+        <Route path="/news/:id" component={NewsDetail} />
         <Route path="/404" component={NotFound} />
         <Route component={NotFound} />
       </Switch>
@@ -41,10 +46,12 @@ function App() {
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light">
-        <TooltipProvider>
-          <Toaster />
-          <Router />
-        </TooltipProvider>
+        <LanguageProvider>
+          <TooltipProvider>
+            <Toaster />
+            <Router />
+          </TooltipProvider>
+        </LanguageProvider>
       </ThemeProvider>
     </ErrorBoundary>
   );

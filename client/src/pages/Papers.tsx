@@ -6,6 +6,7 @@ import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { FileText, ExternalLink, Calendar, Search, X } from "lucide-react";
 import { Link } from "wouter";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const papers = [
   {
@@ -19,6 +20,7 @@ const papers = [
 ];
 
 export default function Papers() {
+  const { language, t } = useLanguage();
   const [searchKeyword, setSearchKeyword] = useState("");
   const [yearFilter, setYearFilter] = useState("");
   const [authorFilter, setAuthorFilter] = useState("");
@@ -63,7 +65,7 @@ export default function Papers() {
             transition={{ delay: 0.1, duration: 0.6 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-display text-foreground mb-6"
           >
-            发表论文
+            {t("papers.title")}
           </motion.h1>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -77,7 +79,9 @@ export default function Papers() {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="text-base text-muted-foreground max-w-2xl leading-relaxed"
           >
-            SAIFS 研究团队在人工智能金融、算法伦理、可信AI等领域持续产出高质量学术成果。
+            {language === "zh"
+              ? "SAIFS 研究团队在人工智能金融、算法伦理、可信AI等领域持续产出高质量学术成果。"
+              : "SAIFS research team continuously produces high-quality academic results in AI finance, algorithm ethics, trustworthy AI, and other fields."}
           </motion.p>
         </div>
       </section>
@@ -93,12 +97,14 @@ export default function Papers() {
           >
             {/* Search Bar */}
             <div className="mb-4">
-              <span className="text-xs font-medium text-muted-foreground mb-2 block">搜索</span>
+              <span className="text-xs font-medium text-muted-foreground mb-2 block">
+                {language === "zh" ? "搜索" : "Search"}
+              </span>
               <div className="relative">
                 <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
                 <input
                   type="text"
-                  placeholder="搜索论文标题或作者..."
+                  placeholder={language === "zh" ? "搜索论文标题或作者..." : "Search paper title or authors..."}
                   value={searchKeyword}
                   onChange={(e) => setSearchKeyword(e.target.value)}
                   className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-background/50 border border-border text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20"
@@ -118,10 +124,10 @@ export default function Papers() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* Year Filter */}
               <div>
-                <span className="text-xs font-medium text-muted-foreground mb-2 block">年份</span>
+                <span className="text-xs font-medium text-muted-foreground mb-2 block">{t("papers.year")}</span>
                 <input
                   type="text"
-                  placeholder="输入年份..."
+                  placeholder={language === "zh" ? "输入年份..." : "Enter year..."}
                   value={yearFilter}
                   onChange={(e) => setYearFilter(e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl bg-background/50 border border-border text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20"
@@ -130,10 +136,10 @@ export default function Papers() {
 
               {/* Author Filter */}
               <div>
-                <span className="text-xs font-medium text-muted-foreground mb-2 block">作者</span>
+                <span className="text-xs font-medium text-muted-foreground mb-2 block">{t("papers.author")}</span>
                 <input
                   type="text"
-                  placeholder="输入作者名..."
+                  placeholder={language === "zh" ? "输入作者名..." : "Enter author name..."}
                   value={authorFilter}
                   onChange={(e) => setAuthorFilter(e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl bg-background/50 border border-border text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20"
@@ -145,14 +151,14 @@ export default function Papers() {
             {hasActiveFilters && (
               <div className="mt-4 pt-4 border-t border-border flex items-center justify-between">
                 <span className="text-xs text-muted-foreground">
-                  找到 {filteredPapers.length} 篇论文
+                  {t("papers.found")} {filteredPapers.length} {t("papers.papers")}
                 </span>
                 <button
                   onClick={clearFilters}
                   className="text-xs text-primary hover:underline flex items-center gap-1"
                 >
                   <X size={14} />
-                  清除筛选
+                  {t("papers.clearFilters")}
                 </button>
               </div>
             )}
@@ -160,13 +166,15 @@ export default function Papers() {
         </div>
       </section>
 
-      {/* Papers List */}
+      {/* papers List */}
       <section className="pb-28">
         <div className="container max-w-4xl">
           <div className="flex flex-col gap-4">
             {filteredPapers.length === 0 ? (
               <div className="text-center py-12">
-                <p className="text-muted-foreground">没有找到匹配的论文</p>
+                <p className="text-muted-foreground">
+                  {language === "zh" ? "没有找到匹配的论文" : "No matching papers found"}
+                </p>
               </div>
             ) : (
               filteredPapers.map((paper, i) => (

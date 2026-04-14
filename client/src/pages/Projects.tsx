@@ -6,39 +6,49 @@ import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { Beaker, TrendingUp, Scale, Brain, Globe, Search, X } from "lucide-react";
 import { Link } from "wouter";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const projects = [
   {
     id: "shanghai-aifin-index",
     icon: TrendingUp,
-    title: "全球金融科技中心发展指数",
-    subtitle: "Shanghai AI-Finance Index",
-    desc: "构建全面衡量人工智能在金融领域应用深度和广度的综合指数体系，定期发布年度报告，为政策制定者和行业从业者提供决策参考。",
-    year: "2024",
+    titleZh: "全球金融科技中心发展指数",
+    titleEn: "Global AI-Finance Center Development Index",
+    subtitleZh: "Shanghai AI-Finance Index",
+    subtitleEn: "Global AI-Finance Center Index",
+    descZh: "构建全面衡量人工智能在金融领域应用深度和广度的综合指数体系，定期发布年度报告，为政策制定者和行业从业者提供决策参考。",
+    descEn: "A comprehensive index system measuring the depth and breadth of AI applications in finance, publishing annual reports to provide decision-making references for policymakers and industry practitioners.",
+    year: "2025",
     color: "oklch(0.75 0.12 75)",
-    tags: ["AI-Fin", "指数研究", "年度报告"],
+    tagsZh: ["AI-Fin", "指数研究", "年度报告"],
+    tagsEn: ["AI-Fin", "Index Research", "Annual Report"],
   },
 ];
 
-const allTags = Array.from(new Set(projects.flatMap((p) => p.tags)));
+const allTagsZh = Array.from(new Set(projects.flatMap((p) => p.tagsZh)));
+const allTagsEn = Array.from(new Set(projects.flatMap((p) => p.tagsEn)));
 
 export default function Projects() {
+  const { language, t } = useLanguage();
   const [yearFilter, setYearFilter] = useState("");
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [searchKeyword, setSearchKeyword] = useState("");
 
   const filteredProjects = useMemo(() => {
     return projects.filter((project) => {
+      const title = language === "zh" ? project.titleZh : project.titleEn;
+      const desc = language === "zh" ? project.descZh : project.descEn;
+      const tags = language === "zh" ? project.tagsZh : project.tagsEn;
       const matchesYear = !yearFilter || project.year.includes(yearFilter);
-      const matchesTag = !selectedTag || project.tags.includes(selectedTag);
+      const matchesTag = !selectedTag || tags.includes(selectedTag);
       const matchesKeyword =
         !searchKeyword ||
-        project.title.toLowerCase().includes(searchKeyword.toLowerCase()) ||
-        project.desc.toLowerCase().includes(searchKeyword.toLowerCase()) ||
-        project.tags.some((tag) => tag.toLowerCase().includes(searchKeyword.toLowerCase()));
+        title.toLowerCase().includes(searchKeyword.toLowerCase()) ||
+        desc.toLowerCase().includes(searchKeyword.toLowerCase()) ||
+        tags.some((tag) => tag.toLowerCase().includes(searchKeyword.toLowerCase()));
       return matchesYear && matchesTag && matchesKeyword;
     });
-  }, [yearFilter, selectedTag, searchKeyword]);
+  }, [yearFilter, selectedTag, searchKeyword, language]);
 
   const clearFilters = () => {
     setYearFilter("");
@@ -47,6 +57,7 @@ export default function Projects() {
   };
 
   const hasActiveFilters = yearFilter || selectedTag || searchKeyword;
+  const allTags = language === "zh" ? allTagsZh : allTagsEn;
 
   return (
     <div>
@@ -66,7 +77,7 @@ export default function Projects() {
             transition={{ delay: 0.1, duration: 0.6 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-display text-foreground mb-6"
           >
-            研究项目
+            {t("projects.title")}
           </motion.h1>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -80,7 +91,7 @@ export default function Projects() {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="text-base text-muted-foreground max-w-2xl leading-relaxed"
           >
-            SAIFS 的研究项目覆盖人工智能金融、伦理治理、可信AI等多个前沿方向，致力于推动AI与金融的深度融合。
+            {t("projects.desc")}
           </motion.p>
         </div>
       </section>
@@ -100,7 +111,7 @@ export default function Projects() {
                 <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
                 <input
                   type="text"
-                  placeholder="搜索关键词..."
+                  placeholder={language === "zh" ? "搜索关键词..." : "Search keywords..."}
                   value={searchKeyword}
                   onChange={(e) => setSearchKeyword(e.target.value)}
                   className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-background/50 border border-border text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20"
@@ -120,10 +131,10 @@ export default function Projects() {
             <div className="flex flex-wrap gap-6">
               {/* Year Filter */}
               <div>
-                <span className="text-xs font-medium text-muted-foreground mb-2 block">年份</span>
+                <span className="text-xs font-medium text-muted-foreground mb-2 block">{t("papers.year")}</span>
                 <input
                   type="text"
-                  placeholder="输入年份..."
+                  placeholder={language === "zh" ? "输入年份..." : "Enter year..."}
                   value={yearFilter}
                   onChange={(e) => setYearFilter(e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl bg-background/50 border border-border text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20"
@@ -135,14 +146,14 @@ export default function Projects() {
             {hasActiveFilters && (
               <div className="mt-4 pt-4 border-t border-border flex items-center justify-between">
                 <span className="text-xs text-muted-foreground">
-                  找到 {filteredProjects.length} 个项目
+                  {t("papers.found")} {filteredProjects.length} {language === "zh" ? "个项目" : "projects"}
                 </span>
                 <button
                   onClick={clearFilters}
                   className="text-xs text-primary hover:underline flex items-center gap-1"
                 >
                   <X size={14} />
-                  清除筛选
+                  {t("papers.clearFilters")}
                 </button>
               </div>
             )}
@@ -160,7 +171,7 @@ export default function Projects() {
             <div className="flex flex-col gap-8">
               {filteredProjects.length === 0 ? (
                 <div className="text-center py-12">
-                  <p className="text-muted-foreground">没有找到匹配的项目</p>
+                  <p className="text-muted-foreground">{language === "zh" ? "没有找到匹配的项目" : "No matching projects found"}</p>
                 </div>
               ) : (
                 filteredProjects.map((project, i) => (
@@ -198,17 +209,17 @@ export default function Projects() {
                           </div>
                           <div className="flex-1">
                             <div className="flex items-center gap-3 mb-1">
-                              <h3 className="text-xl font-display text-foreground">{project.title}</h3>
+                              <h3 className="text-xl font-display text-foreground">{language === "zh" ? project.titleZh : project.titleEn}</h3>
                               <span className="px-2 py-0.5 rounded text-xs font-medium bg-primary/8 text-primary">
                                 {project.year}
                               </span>
                             </div>
-                            <p className="text-xs text-muted-foreground tracking-wider">{project.subtitle}</p>
+                            <p className="text-xs text-muted-foreground tracking-wider">{language === "zh" ? project.subtitleZh : project.subtitleEn}</p>
                           </div>
                         </div>
-                        <p className="text-sm text-muted-foreground leading-relaxed mb-5">{project.desc}</p>
+                        <p className="text-sm text-muted-foreground leading-relaxed mb-5">{language === "zh" ? project.descZh : project.descEn}</p>
                         <div className="flex flex-wrap gap-2">
-                          {project.tags.map((tag) => (
+                          {(language === "zh" ? project.tagsZh : project.tagsEn).map((tag) => (
                             <span
                               key={tag}
                               className="px-3 py-1 rounded-full text-xs font-medium"

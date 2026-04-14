@@ -5,6 +5,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight, Brain, Shield, ChevronRight } from "lucide-react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663030386668/VtxKsVYCNS3ckeWH93PHhR/hero-bg-8MkQpmoFr4Tq8bpGQcTRtQ.webp";
 const AI_FIN_IMG = "/avatars/AI-FIN.png";
@@ -20,18 +21,46 @@ const fadeUp = {
 };
 
 const stats = [
-  { value: "2023", label: "创立年份" },
-  { value: "2", label: "研究中心" },
-  { value: "11+", label: "核心成员" },
-  { value: "全球首家", label: "AI-Finance 学院" },
+  { zh: { value: "2023", label: "创立年份" }, en: { value: "2023", label: "Founded" } },
+  { zh: { value: "2", label: "研究中心" }, en: { value: "2", label: "Research Centers" } },
+  { zh: { value: "11+", label: "核心成员" }, en: { value: "11+", label: "Core Members" } },
+  { zh: { value: "全球首家", label: "AI-Fin 学院" }, en: { value: "World's First", label: "AI-Fin School" } },
+];
+
+const news = [
+  {
+    id: "1",
+    date: "2026-03-24",
+    titleZh: "华东师范大学校长马余刚院士一行调研上海人工智能金融学院",
+    titleEn: "Dean Ma Yugang of ECNU Visits Shanghai AI-Finance School",
+    excerptZh: "2026年3月24日上午，华东师范大学校长、中国科学院院士马余刚率队赴上海人工智能金融学院（SAIFS）开展专项调研...",
+    excerptEn: "On the morning of March 24, 2026, Dean Ma Yugang of ECNU led a team to visit SAIFS for a special research session...",
+  },
+  {
+    id: "2",
+    date: "2026-03-18",
+    titleZh: "你的工作，AI还需要多久才能接手？",
+    titleEn: "How Long Before AI Takes Over Your Job?",
+    excerptZh: "上周，Andrej Karpathy（特斯拉前 AI 总监）给 342 个美国职业打了 AI 替代风险分，高暴露岗位涉及工资总额高达 3.7 万亿美元...",
+    excerptEn: "Last week, Andrej Karpathy (former Tesla AI Director) scored 342 US occupations for AI replacement risk...",
+  },
+  {
+    id: "3",
+    date: "2026-03-04",
+    titleZh: "邵怡蕾｜AI改写历史终结：从技术-治理双曲线到人工智能素养与人文素养并进的双框架",
+    titleEn: "Shao Yilei | AI Rewrites the End of History",
+    excerptZh: "人工智能正在重启被福山宣告终结的历史。以'技术-治理'双曲线为核心框架展开分析，可以发现技术指数攀升与治理线性迟滞之间存在'合法性鸿沟'...",
+    excerptEn: "AI is restarting history declared ended by Fukuyama. Using the 'technology-governance' dual curve framework...",
+  },
 ];
 
 export default function Home() {
+  const { language, t } = useLanguage();
+
   return (
     <div>
       {/* ===== HERO SECTION ===== */}
       <section className="relative min-h-[92vh] flex items-center overflow-hidden">
-        {/* Background image with light overlay */}
         <div className="absolute inset-0">
           <img
             src={HERO_BG}
@@ -52,7 +81,7 @@ export default function Home() {
             >
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
               <span className="text-xs font-medium text-primary tracking-wider uppercase">
-                Shanghai AI-Finance School, ECNU
+                {t("hero.subtitle")}
               </span>
             </motion.div>
 
@@ -63,11 +92,23 @@ export default function Home() {
               custom={1}
               className="text-4xl sm:text-5xl lg:text-7xl font-display leading-[1.1] tracking-tight mb-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]"
             >
-              <span className="text-foreground">华东师范大学</span>
-              <br />
-              <span className="text-brand-gradient">上海人工智能</span>
-              <br />
-              <span className="text-brand-gradient">金融学院</span>
+              {language === "zh" ? (
+                <>
+                  <span className="text-foreground">华东师范大学</span>
+                  <br />
+                  <span className="text-brand-gradient">上海人工智能</span>
+                  <br />
+                  <span className="text-brand-gradient">金融学院</span>
+                </>
+              ) : (
+                <>
+                  <span className="text-foreground">East China</span>
+                  <br />
+                  <span className="text-brand-gradient">Normal University</span>
+                  <br />
+                  <span className="text-brand-gradient">Shanghai AI-Finance School</span>
+                </>
+              )}
             </motion.h1>
 
             <motion.p
@@ -78,7 +119,7 @@ export default function Home() {
               className="text-lg sm:text-xl leading-relaxed max-w-xl mb-4 drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]"
               style={{ color: 'rgba(255,255,255,0.95)' }}
             >
-              我们培养的是将人工智能与金融智慧融入世界的未来塑造者
+              {t("hero.desc")}
             </motion.p>
 
             <motion.p
@@ -89,7 +130,7 @@ export default function Home() {
               className="text-sm mb-16 italic drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
               style={{ color: 'rgba(255,255,255,0.85)' }}
             >
-              — 创院院长 邵怡蕾教授
+              {t("hero.author")}
             </motion.p>
 
             <motion.div
@@ -103,20 +144,19 @@ export default function Home() {
                 href="/about"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium text-sm transition-all duration-300 hover:shadow-[0_4px_20px_oklch(0.52_0.18_270_/_25%)] hover:-translate-y-0.5"
               >
-                了解更多
+                {t("hero.learnMore")}
                 <ArrowRight size={16} />
               </Link>
               <Link
                 href="/team"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border text-foreground font-medium text-sm transition-all duration-300 hover:border-primary/40 hover:bg-primary/5"
               >
-                研究团队
+                {t("hero.researchTeam")}
               </Link>
             </motion.div>
           </div>
         </div>
 
-        {/* Bottom gradient fade */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
       </section>
 
@@ -132,7 +172,7 @@ export default function Home() {
           >
             {stats.map((stat, i) => (
               <motion.div
-                key={stat.label}
+                key={stat.zh.label}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -143,10 +183,10 @@ export default function Home() {
                   <div className="absolute left-0 top-1/2 -translate-y-1/2 w-px h-8 bg-gradient-to-b from-transparent via-border to-transparent hidden lg:block" />
                 )}
                 <div className="text-2xl sm:text-3xl font-display text-brand-gradient mb-1.5">
-                  {stat.value}
+                  {language === "zh" ? stat.zh.value : stat.en.value}
                 </div>
                 <div className="text-[11px] text-muted-foreground tracking-wider uppercase">
-                  {stat.label}
+                  {language === "zh" ? stat.zh.label : stat.en.label}
                 </div>
               </motion.div>
             ))}
@@ -168,7 +208,7 @@ export default function Home() {
               Research Centers
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display text-foreground">
-              研究中心
+              {t("centers.title")}
             </h2>
           </motion.div>
 
@@ -180,7 +220,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <Link href="/about" className="block group">
+              <Link href="/about#aifin-center" className="block group">
                 <div className="glass-card rounded-2xl overflow-hidden transition-all duration-500 hover:border-primary/20 hover:shadow-[0_8px_40px_oklch(0.52_0.18_270_/_10%)]">
                   <div className="aspect-[16/9] overflow-hidden">
                     <img
@@ -195,14 +235,16 @@ export default function Home() {
                         <Brain size={20} className="text-primary" />
                       </div>
                       <h3 className="text-xl font-display text-foreground">
-                        AI-Fin 研究中心
+                        {language === "zh" ? "AI-Fin 研究中心" : "AI-Fin Research Center"}
                       </h3>
                     </div>
                     <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                      人工智能金融研究中心，专注于人工智能在金融领域的应用研究，包括智能投资、风险控制、金融科技等方向。
+                      {language === "zh" 
+                        ? "人工智能金融研究中心，专注于人工智能在金融领域的应用研究，包括智能投资、风险控制、金融科技等方向。"
+                        : "The AI-Fin Research Center focuses on AI applications in finance, including intelligent investment, risk control, and fintech."}
                     </p>
                     <span className="inline-flex items-center gap-1 text-sm text-primary font-medium group-hover:gap-2 transition-all">
-                      了解更多 <ChevronRight size={14} />
+                      {t("centers.learnMore")} <ChevronRight size={14} />
                     </span>
                   </div>
                 </div>
@@ -216,7 +258,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <Link href="/about" className="block group">
+              <Link href="/about#aippe-center" className="block group">
                 <div className="glass-card rounded-2xl overflow-hidden transition-all duration-500 hover:border-[oklch(0.55_0.12_200_/_20%)] hover:shadow-[0_8px_40px_oklch(0.55_0.12_200_/_10%)]">
                   <div className="aspect-[16/9] overflow-hidden">
                     <img
@@ -231,19 +273,81 @@ export default function Home() {
                         <Shield size={20} className="text-[oklch(0.55_0.12_200)]" />
                       </div>
                       <h3 className="text-xl font-display text-foreground">
-                        AI-PPE 研究中心
+                        {language === "zh" ? "AI-PPE 研究中心" : "AI-PPE Research Center"}
                       </h3>
                     </div>
                     <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                      人工智能伦理与治理研究中心，研究人工智能的伦理问题、法律法规、社会影响，推动AI的负责任发展。
+                      {language === "zh" 
+                        ? "人工智能伦理与治理研究中心，研究人工智能的伦理问题、法律法规、社会影响，推动AI的负责任发展。"
+                        : "The AI-PPE Research Center studies AI ethics, regulations, social impact, and promotes responsible AI development."}
                     </p>
                     <span className="inline-flex items-center gap-1 text-sm text-[oklch(0.55_0.12_200)] font-medium group-hover:gap-2 transition-all">
-                      了解更多 <ChevronRight size={14} />
+                      {t("centers.learnMore")} <ChevronRight size={14} />
                     </span>
                   </div>
                 </div>
               </Link>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== NEWS SECTION ===== */}
+      <section className="py-24 bg-[oklch(0.97_0.005_260)]">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex items-end justify-between mb-12"
+          >
+            <div>
+              <span className="text-xs font-medium text-primary tracking-[0.2em] uppercase mb-3 block">
+                Latest News
+              </span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display text-foreground">
+                {t("news.title")}
+              </h2>
+            </div>
+            <Link
+              href="/news"
+              className="inline-flex items-center gap-2 text-sm text-primary font-medium hover:gap-3 transition-all"
+            >
+              {t("news.viewAll")} <ArrowRight size={16} />
+            </Link>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {news.slice(0, 3).map((item, i) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.6 }}
+              >
+                <Link
+                  href={`/news/${item.id}`}
+                  className="group block glass-card rounded-2xl p-6 transition-all duration-500 hover:border-primary/15 hover:-translate-y-1"
+                >
+                  <time className="text-xs text-primary font-medium tracking-wider mb-3 block">
+                    {item.date}
+                  </time>
+                  <h3 className="text-base font-semibold text-foreground leading-snug mb-3 line-clamp-2 group-hover:text-primary transition-colors">
+                    {language === "zh" ? item.titleZh : item.titleEn}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
+                    {language === "zh" ? item.excerptZh : item.excerptEn}
+                  </p>
+                  <div className="mt-4 pt-4 border-t border-border">
+                    <span className="inline-flex items-center gap-1 text-xs text-muted-foreground group-hover:text-primary transition-colors">
+                      {t("news.readMore")} <ChevronRight size={12} />
+                    </span>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -256,33 +360,38 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="rounded-3xl p-12 lg:p-20 text-center relative overflow-hidden bg-gradient-to-br from-[oklch(0.52_0.18_270)] via-[oklch(0.48_0.19_275)] to-[oklch(0.45_0.20_280)]"
+            className="rounded-3xl p-12 lg:p-20 text-center relative overflow-hidden"
           >
-            {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[oklch(1_0_0_/_6%)] rounded-full blur-[100px]" />
-            <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[oklch(1_0_0_/_4%)] rounded-full blur-[80px]" />
+            <div className="absolute inset-0">
+              <img
+                src={HERO_BG}
+                alt=""
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.99_0.002_260_/_88%)] via-[oklch(0.99_0.002_260_/_70%)] to-[oklch(0.99_0.002_260_/_40%)]" />
+            </div>
 
             <div className="relative z-10">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display text-white mb-6">
-                加入我们，塑造未来
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display text-[oklch(0.25_0.02_260)] mb-6">
+                {t("cta.title")}
               </h2>
-              <p className="text-white/75 max-w-lg mx-auto mb-10 leading-relaxed">
-                SAIFS 致力于培养集金融知识、人工智能技术和实践经验于一身的新一代 AI-Fin 领军型卓越人才。
+              <p className="text-[oklch(0.35_0.02_260)] max-w-lg mx-auto mb-10 leading-relaxed">
+                {t("cta.desc")}
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/opportunities"
-                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-white text-[oklch(0.45_0.20_280)] font-medium text-sm transition-all duration-300 hover:shadow-[0_4px_20px_oklch(0_0_0_/_15%)] hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-[oklch(0.45_0.20_280)] text-white font-semibold text-sm transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.25)] hover:-translate-y-1"
                   onClick={() => window.scrollTo(0, 0)}
                 >
-                  查看机会
+                  {t("cta.viewOpportunities")}
                   <ArrowRight size={16} />
                 </Link>
                 <a
                   href="mailto:saifsadministration@sem.ecnu.edu.cn"
-                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg border border-white/25 text-white font-medium text-sm transition-all duration-300 hover:border-white/50 hover:bg-white/10"
+                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg border-2 border-[oklch(0.45_0.20_280)] text-[oklch(0.45_0.20_280)] font-semibold text-sm transition-all duration-300 hover:bg-[oklch(0.45_0.20_280)] hover:text-white hover:-translate-y-1"
                 >
-                  联系我们
+                  {t("cta.contactUs")}
                 </a>
               </div>
             </div>

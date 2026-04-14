@@ -4,11 +4,14 @@
  */
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { useLanguage } from "../contexts/LanguageContext";
 
 interface Member {
   id: string;
   name: string;
+  nameEn: string;
   role: string;
+  roleEn: string;
   category: string;
   avatar?: string;
 }
@@ -16,7 +19,7 @@ interface Member {
 const AVATARS: Record<string, string> = {
   "邵怡蕾": "https://d2xsxph8kpxj0f.cloudfront.net/310419663030386668/VtxKsVYCNS3ckeWH93PHhR/shao-yilei_91f1a2ed.jpg",
   "文青松": "https://d2xsxph8kpxj0f.cloudfront.net/310419663030386668/VtxKsVYCNS3ckeWH93PHhR/wenqingsong_3094f98b.jpg",
-  "吴宗翰": "https://d2xsxph8kpxj0f.cloudfront.net/310419663030386668/VtxKsVYCNS3ckeWH93PHhR/wuzonghan_26c2c942.jpg",
+  "吴宗翰": "/avatars/wu-zonghan.png",
   "汤傲成": "https://d2xsxph8kpxj0f.cloudfront.net/310419663030386668/VtxKsVYCNS3ckeWH93PHhR/tangaocheng_8f24394c.jpg",
   "汪俊霖": "https://d2xsxph8kpxj0f.cloudfront.net/310419663030386668/VtxKsVYCNS3ckeWH93PHhR/wangjunlin_90e79973.jpg",
   "温南夫": "https://d2xsxph8kpxj0f.cloudfront.net/310419663030386668/VtxKsVYCNS3ckeWH93PHhR/wennanfu_b0e1215b.jpg",
@@ -28,25 +31,25 @@ const AVATARS: Record<string, string> = {
 };
 
 const categories = [
-  { key: "professor", label: "教授", color: "oklch(0.52 0.18 270)" },
-  { key: "assistant-professor", label: "助理教授", color: "oklch(0.55 0.12 200)" },
-  { key: "assistant-researcher", label: "助理研究员", color: "oklch(0.50 0.15 180)" },
-  { key: "phd", label: "博士研究生", color: "oklch(0.45 0.20 280)" },
-  { key: "master", label: "硕士研究生", color: "oklch(0.55 0.10 150)" },
+  { key: "professor", labelZh: "教授", labelEn: "Professor", color: "oklch(0.52 0.18 270)" },
+  { key: "assistant-professor", labelZh: "助理教授", labelEn: "Assistant Professor", color: "oklch(0.55 0.12 200)" },
+  { key: "assistant-researcher", labelZh: "助理研究员", labelEn: "Assistant Researcher", color: "oklch(0.50 0.15 180)" },
+  { key: "phd", labelZh: "博士研究生", labelEn: "PhD Student", color: "oklch(0.45 0.20 280)" },
+  { key: "master", labelZh: "硕士研究生", labelEn: "Master Student", color: "oklch(0.55 0.10 150)" },
 ];
 
 const members: Member[] = [
-  { id: "shao-yilei", name: "邵怡蕾", role: "教授（创院院长）", category: "professor" },
-  { id: "wen-qingsong", name: "文青松", role: "兼职教授", category: "professor" },
-  { id: "wu-zonghan", name: "吴宗翰", role: "助理教授", category: "assistant-professor" },
-  { id: "tang-aocheng", name: "汤傲成", role: "助理教授", category: "assistant-professor" },
-  { id: "wang-junlin", name: "汪俊霖", role: "助理研究员", category: "assistant-researcher" },
-  { id: "wen-nanfu", name: "温南夫", role: "助理研究员", category: "assistant-researcher" },
-  { id: "hu-zhongbo", name: "胡忠博", role: "博士研究生", category: "phd" },
-  { id: "liu-yang", name: "刘洋", role: "博士研究生", category: "phd" },
-  { id: "lu-wenyi", name: "陆文益", role: "博士研究生", category: "phd" },
-  { id: "wang-yuanlong", name: "王源龙", role: "博士研究生", category: "phd" },
-  { id: "hao-muqin", name: "郝牧青", role: "硕士研究生", category: "master" },
+  { id: "shao-yilei", name: "邵怡蕾", nameEn: "Shao Yilei", role: "教授（创院院长）", roleEn: "Professor (Founding Dean)", category: "professor" },
+  { id: "wen-qingsong", name: "文青松", nameEn: "Wen Qingsong", role: "兼职教授", roleEn: "Adjunct Professor", category: "professor" },
+  { id: "tang-aocheng", name: "汤傲成", nameEn: "Tang Aocheng", role: "助理教授", roleEn: "Assistant Professor", category: "assistant-professor" },
+  { id: "wu-zonghan", name: "吴宗翰", nameEn: "Wu Zonghan", role: "助理教授", roleEn: "Assistant Professor", category: "assistant-professor" },
+  { id: "wang-junlin", name: "汪俊霖", nameEn: "Wang Junlin", role: "助理研究员", roleEn: "Assistant Researcher", category: "assistant-researcher" },
+  { id: "wen-nanfu", name: "温南夫", nameEn: "Wen Nanfu", role: "助理研究员", roleEn: "Assistant Researcher", category: "assistant-researcher" },
+  { id: "hu-zhongbo", name: "胡忠博", nameEn: "Hu Zhongbo", role: "博士研究生", roleEn: "PhD Student", category: "phd" },
+  { id: "liu-yang", name: "刘洋", nameEn: "Liu Yang", role: "博士研究生", roleEn: "PhD Student", category: "phd" },
+  { id: "lu-wenyi", name: "陆文益", nameEn: "Lu Wenyi", role: "博士研究生", roleEn: "PhD Student", category: "phd" },
+  { id: "wang-yuanlong", name: "王源龙", nameEn: "Wang Yuanlong", role: "博士研究生", roleEn: "PhD Student", category: "phd" },
+  { id: "hao-muqin", name: "郝牧青", nameEn: "Hao Muqing", role: "硕士研究生", roleEn: "Master Student", category: "master" },
 ];
 
 function getInitials(name: string) {
@@ -54,6 +57,8 @@ function getInitials(name: string) {
 }
 
 export default function Team() {
+  const { language, t } = useLanguage();
+
   return (
     <div>
       {/* Hero */}
@@ -72,7 +77,7 @@ export default function Team() {
             transition={{ delay: 0.1, duration: 0.6 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-display text-foreground mb-6"
           >
-            研究团队
+            {t("team.title")}
           </motion.h1>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -86,7 +91,9 @@ export default function Team() {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="text-base text-muted-foreground max-w-2xl leading-relaxed"
           >
-            SAIFS 汇聚了来自人工智能、金融学、经济学、哲学等多学科的优秀研究者，共同探索 AI 与金融的交叉前沿。
+            {language === "zh"
+              ? "SAIFS 汇聚了来自人工智能、金融学、经济学、哲学等多学科的优秀研究者，共同探索 AI 与金融的交叉前沿。"
+              : "SAIFS brings together excellent researchers from multiple disciplines including AI, finance, economics, and philosophy to explore the frontiers of AI and finance."}
           </motion.p>
         </div>
       </section>
@@ -109,7 +116,7 @@ export default function Team() {
                   style={{ backgroundColor: cat.color }}
                 />
                 <h2 className="text-xl sm:text-2xl font-display text-foreground">
-                  {cat.label}
+                  {language === "zh" ? cat.labelZh : cat.labelEn}
                 </h2>
               </motion.div>
 
@@ -148,9 +155,11 @@ export default function Team() {
                             )}
                             <div>
                               <h3 className="text-base font-semibold text-foreground font-sans">
-                                {member.name}
+                                {language === "zh" ? member.name : member.nameEn}
                               </h3>
-                              <p className="text-xs text-muted-foreground mt-0.5">{member.role}</p>
+                              <p className="text-xs text-muted-foreground mt-0.5">
+                                {language === "zh" ? member.role : member.roleEn}
+                              </p>
                             </div>
                           </div>
                         </div>

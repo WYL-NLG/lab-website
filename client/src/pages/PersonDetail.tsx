@@ -8,7 +8,7 @@ import { ArrowLeft, Mail, GraduationCap, BookOpen, Calendar } from "lucide-react
 const AVATARS: Record<string, string> = {
   "邵怡蕾": "https://d2xsxph8kpxj0f.cloudfront.net/310419663030386668/VtxKsVYCNS3ckeWH93PHhR/shao-yilei_91f1a2ed.jpg",
   "文青松": "https://d2xsxph8kpxj0f.cloudfront.net/310419663030386668/VtxKsVYCNS3ckeWH93PHhR/wenqingsong_3094f98b.jpg",
-  "吴宗翰": "https://d2xsxph8kpxj0f.cloudfront.net/310419663030386668/VtxKsVYCNS3ckeWH93PHhR/wuzonghan_26c2c942.jpg",
+  "吴宗翰": "/avatars/wu-zonghan.png",
   "汤傲成": "https://d2xsxph8kpxj0f.cloudfront.net/310419663030386668/VtxKsVYCNS3ckeWH93PHhR/tangaocheng_8f24394c.jpg",
   "汪俊霖": "https://d2xsxph8kpxj0f.cloudfront.net/310419663030386668/VtxKsVYCNS3ckeWH93PHhR/wangjunlin_90e79973.jpg",
   "温南夫": "https://d2xsxph8kpxj0f.cloudfront.net/310419663030386668/VtxKsVYCNS3ckeWH93PHhR/wennanfu_b0e1215b.jpg",
