@@ -326,10 +326,11 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.6 }}
+                className="flex"
               >
                 <Link
                   href={`/news/${item.id}`}
-                  className="group block glass-card rounded-2xl p-6 transition-all duration-500 hover:border-primary/15 hover:-translate-y-1"
+                  className="group flex flex-col glass-card rounded-2xl p-6 transition-all duration-500 hover:border-primary/15 hover:-translate-y-1 w-full"
                 >
                   <time className="text-xs text-primary font-medium tracking-wider mb-3 block">
                     {item.date}
@@ -337,10 +338,10 @@ export default function Home() {
                   <h3 className="text-base font-semibold text-foreground leading-snug mb-3 line-clamp-2 group-hover:text-primary transition-colors">
                     {language === "zh" ? item.titleZh : item.titleEn}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
+                  <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3 flex-1">
                     {language === "zh" ? item.excerptZh : item.excerptEn}
                   </p>
-                  <div className="mt-4 pt-4 border-t border-border">
+                  <div className="mt-auto pt-4 border-t border-border">
                     <span className="inline-flex items-center gap-1 text-xs text-muted-foreground group-hover:text-primary transition-colors">
                       {t("news.readMore")} <ChevronRight size={12} />
                     </span>
