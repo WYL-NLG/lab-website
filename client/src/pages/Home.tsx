@@ -4,7 +4,7 @@
  */
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ArrowRight, Brain, Shield, ChevronRight } from "lucide-react";
+import { ArrowRight, Brain, CircuitBoard, Cpu, ChevronRight } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663030386668/VtxKsVYCNS3ckeWH93PHhR/hero-bg-8MkQpmoFr4Tq8bpGQcTRtQ.webp";
@@ -22,7 +22,7 @@ const fadeUp = {
 
 const stats = [
   { zh: { value: "2023", label: "创立年份" }, en: { value: "2023", label: "Founded" } },
-  { zh: { value: "2", label: "研究中心" }, en: { value: "2", label: "Research Centers" } },
+  { zh: { value: "3", label: "研究中心" }, en: { value: "3", label: "Research Centers" } },
   { zh: { value: "11+", label: "核心成员" }, en: { value: "11+", label: "Core Members" } },
   { zh: { value: "全球首家", label: "AI-Fin 学院" }, en: { value: "World's First", label: "AI-Fin School" } },
 ];
@@ -240,7 +240,7 @@ export default function Home() {
                     </div>
                     <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                       {language === "zh" 
-                        ? "人工智能金融研究中心，专注于人工智能在金融领域的应用研究，包括智能投资、风险控制、金融科技等方向。"
+                        ? "人工智能金融研究中心，专注于人工智能在金融领域的应用研究，包括智能投资、风险控制、金融科技等方向。" 
                         : "The AI-Fin Research Center focuses on AI applications in finance, including intelligent investment, risk control, and fintech."}
                     </p>
                     <span className="inline-flex items-center gap-1 text-sm text-primary font-medium group-hover:gap-2 transition-all">
@@ -251,7 +251,7 @@ export default function Home() {
               </Link>
             </motion.div>
 
-            {/* AI-PPE Card */}
+            {/* Silicon-based Economy Card */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -262,24 +262,24 @@ export default function Home() {
                 <div className="glass-card rounded-2xl overflow-hidden transition-all duration-500 hover:border-[oklch(0.55_0.12_200_/_20%)] hover:shadow-[0_8px_40px_oklch(0.55_0.12_200_/_10%)]">
                   <div className="aspect-[16/9] overflow-hidden">
                     <img
-                      src={AI_PPE_IMG}
-                      alt="AI-PPE Research Center"
+                      src="/avatars/SI-ECON.png"
+                      alt="Silicon-based Economy Research Center"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
                   <div className="p-8">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-10 h-10 rounded-xl bg-[oklch(0.55_0.12_200_/_8%)] flex items-center justify-center">
-                        <Shield size={20} className="text-[oklch(0.55_0.12_200)]" />
+                        <CircuitBoard size={20} className="text-[oklch(0.55_0.12_200)]" />
                       </div>
                       <h3 className="text-xl font-display text-foreground">
-                        {language === "zh" ? "AI-PPE 研究中心" : "AI-PPE Research Center"}
+                        {language === "zh" ? "硅基经济研究中心" : "Silicon-based Economy Research Center"}
                       </h3>
                     </div>
                     <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                       {language === "zh" 
-                        ? "人工智能伦理与治理研究中心，研究人工智能的伦理问题、法律法规、社会影响，推动AI的负责任发展。"
-                        : "The AI-PPE Research Center studies AI ethics, regulations, social impact, and promotes responsible AI development."}
+                        ? "硅基经济研究中心聚焦于数字经济与AI技术的深度融合，研究AI如何重塑传统经济模式、价值创造方式和产业组织形式。" 
+                        : "The Silicon-based Economy Research Center focuses on the deep integration of digital economy and AI technology, researching how AI is reshaping traditional economic models."}
                     </p>
                     <span className="inline-flex items-center gap-1 text-sm text-[oklch(0.55_0.12_200)] font-medium group-hover:gap-2 transition-all">
                       {t("centers.learnMore")} <ChevronRight size={14} />
@@ -289,6 +289,65 @@ export default function Home() {
               </Link>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* ===== FINANCIAL LLM LAB ===== */}
+      <section className="py-20 bg-[oklch(0.97_0.005_260)]">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <span className="text-xs font-medium text-accent tracking-[0.2em] uppercase mb-3 block">
+              Research Lab
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display text-foreground">
+              {language === "zh" ? "金融大模型实验室" : "Financial LLM Lab"}
+            </h2>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <Link href="/about#llm-lab" className="block group">
+              <div className="glass-card rounded-2xl overflow-hidden transition-all duration-500 hover:border-accent/20 hover:shadow-[0_8px_40px_oklch(0.7_0.15_100_/_10%)]">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-8 lg:p-12">
+                  <div className="aspect-[16/9] overflow-hidden rounded-xl">
+                    <img
+                      src="/avatars/fin llm lab.png"
+                      alt="Financial LLM Lab"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-10 h-10 rounded-xl bg-accent/8 flex items-center justify-center">
+                        <Cpu size={20} className="text-accent" />
+                      </div>
+                      <h3 className="text-2xl font-display text-foreground">
+                        {language === "zh" ? "金融大模型实验室" : "Financial LLM Lab"}
+                      </h3>
+                    </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                      {language === "zh" 
+                        ? "金融大模型实验室聚焦于大语言模型在金融领域的应用研究，致力于探索如何将先进的语言模型技术与金融市场分析、风险管理、投资决策等金融核心场景深度融合。实验室将开展金融领域专有的大语言模型训练与微调研究，构建金融文本理解和生成的核心能力，并探索多模态大模型在金融场景中的创新应用。" 
+                        : "The Financial LLM Lab focuses on applied research of large language models in the financial domain, committed to exploring how advanced language model technologies can be deeply integrated with core financial scenarios such as market analysis, risk management, and investment decisions. The lab will conduct research on training and fine-tuning LLMs specialized for finance, building core capabilities in financial text understanding and generation."}
+                    </p>
+                    <span className="inline-flex items-center gap-1 text-sm text-accent font-medium group-hover:gap-2 transition-all">
+                      {t("centers.learnMore")} <ChevronRight size={14} />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
         </div>
       </section>
 
@@ -365,8 +424,8 @@ export default function Home() {
           >
             <div className="absolute inset-0">
               <img
-                src={HERO_BG}
-                alt=""
+                src="/avatars/加入我们image.png"
+                alt="Join Us"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.99_0.002_260_/_88%)] via-[oklch(0.99_0.002_260_/_70%)] to-[oklch(0.99_0.002_260_/_40%)]" />

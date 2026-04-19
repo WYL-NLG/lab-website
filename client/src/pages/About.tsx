@@ -3,55 +3,10 @@
  * Clean white backgrounds, SAIFS blue-indigo accents
  */
 import { motion } from "framer-motion";
-import { Brain, Shield, BookOpen, Globe, Users, Lightbulb } from "lucide-react";
+import { Brain, CircuitBoard, Cpu } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 
 const ABOUT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663030386668/VtxKsVYCNS3ckeWH93PHhR/about-section-nfUWCSNJv8kpcx7upcaHpD.webp";
-
-const aiPpeDirections = [
-  { 
-    icon: Shield, 
-    titleZh: "数据隐私与安全", 
-    titleEn: "Data Privacy & Security",
-    descZh: "研究如何保护用户数据的隐私，防止数据泄露和滥用",
-    descEn: "Research on protecting user data privacy and preventing leaks"
-  },
-  { 
-    icon: BookOpen, 
-    titleZh: "算法公正与透明", 
-    titleEn: "Algorithm Fairness & Transparency",
-    descZh: "确保人工智能算法的公正性和透明度，减少偏见和歧视",
-    descEn: "Ensuring fairness and transparency in AI algorithms"
-  },
-  { 
-    icon: Globe, 
-    titleZh: "可信人工智能", 
-    titleEn: "Trustworthy AI",
-    descZh: "构建可信人工智能理论研究、测试基准及开放平台",
-    descEn: "Building theoretical research, benchmarks and open platforms for trustworthy AI"
-  },
-  { 
-    icon: Users, 
-    titleZh: "社会公平与包容性", 
-    titleEn: "Social Equity & Inclusion",
-    descZh: "解决数字鸿沟和社会不平等问题，促进公平的AI发展",
-    descEn: "Addressing digital divide and social inequality"
-  },
-  { 
-    icon: Lightbulb, 
-    titleZh: "人机协作与关系", 
-    titleEn: "Human-AI Collaboration",
-    descZh: "研究人类与AI系统之间的协作，包括人机界面设计",
-    descEn: "Research on human-AI collaboration and interface design"
-  },
-  { 
-    icon: Globe, 
-    titleZh: "国际合作与安全治理", 
-    titleEn: "International Cooperation & Security Governance",
-    descZh: "制定国际性的人工智能安全和规范框架",
-    descEn: "Developing international AI safety and regulatory frameworks"
-  },
-];
 
 export default function About() {
   const { language, t } = useLanguage();
@@ -61,8 +16,8 @@ export default function About() {
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={ABOUT_IMG} alt="" className="w-full h-full object-cover opacity-15" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background" />
+          <img src={ABOUT_IMG} alt="" className="w-full h-full object-cover opacity-90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
         </div>
         <div className="container relative z-10">
           <motion.span
@@ -182,7 +137,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* AI-PPE Center */}
+      {/* Silicon-based Economy Research Center */}
       <section id="aippe-center" className="py-20">
         <div className="container">
           <motion.div
@@ -193,43 +148,56 @@ export default function About() {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-xl bg-[oklch(0.55_0.12_200_/_8%)] flex items-center justify-center">
-                <Shield size={20} className="text-[oklch(0.55_0.12_200)]" />
+                <CircuitBoard size={20} className="text-[oklch(0.55_0.12_200)]" />
               </div>
               <h2 className="text-2xl sm:text-3xl font-display text-foreground">
                 {t("about.aippeCenter")}
               </h2>
             </div>
           </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-base text-muted-foreground leading-[1.9] mb-12 max-w-3xl"
+            transition={{ duration: 0.6 }}
+            className="glass-card rounded-2xl p-8 lg:p-12"
           >
-            {t("about.aippeDesc")}
-          </motion.p>
+            <p className="text-base text-muted-foreground leading-[1.9]">
+              {t("about.aippeDesc")}
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {aiPpeDirections.map((item, i) => (
-              <motion.div
-                key={item.titleZh}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08, duration: 0.5 }}
-                className="glass-card rounded-xl p-6 transition-all duration-400 hover:border-[oklch(0.55_0.12_200_/_20%)] hover:-translate-y-1"
-              >
-                <item.icon size={20} className="text-[oklch(0.55_0.12_200)] mb-3" />
-                <h4 className="text-sm font-semibold text-foreground mb-2 font-sans">
-                  {language === "zh" ? item.titleZh : item.titleEn}
-                </h4>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  {language === "zh" ? item.descZh : item.descEn}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+      {/* Financial LLM Lab */}
+      <section id="llm-lab" className="py-20 bg-[oklch(0.97_0.005_260)]">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-xl bg-accent/8 flex items-center justify-center">
+                <Cpu size={20} className="text-accent" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-display text-foreground">
+                {t("about.llmCenter")}
+              </h2>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="glass-card rounded-2xl p-8 lg:p-12"
+          >
+            <p className="text-base text-muted-foreground leading-[1.9]">
+              {t("about.llmDesc")}
+            </p>
+          </motion.div>
         </div>
       </section>
     </div>
