@@ -53,7 +53,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       >
         <nav className="container flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center group">
+          <Link href="/" className="flex items-center group" onClick={() => window.scrollTo(0, 0)}>
             <SAIFSLogo className="h-8 sm:h-9 w-auto text-foreground transition-transform duration-300 group-hover:scale-[1.02]" />
           </Link>
 
@@ -68,6 +68,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     ? "text-primary"
                     : "text-[oklch(0.45_0.02_260)] hover:text-foreground hover:bg-[oklch(0_0_0_/_3%)]"
                 }`}
+                onClick={() => window.scrollTo(0, 0)}
               >
                 {t(item.key)}
                 {location === item.href && (
@@ -127,6 +128,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                         ? "text-primary bg-[oklch(0.52_0.18_270_/_6%)]"
                         : "text-muted-foreground hover:text-foreground hover:bg-[oklch(0_0_0_/_3%)]"
                     }`}
+                    onClick={() => window.scrollTo(0, 0)}
                   >
                     {t(item.key)}
                   </Link>
@@ -177,6 +179,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     key={item.href}
                     href={item.href}
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    onClick={() => window.scrollTo(0, 0)}
                   >
                     {t(item.key)}
                   </Link>

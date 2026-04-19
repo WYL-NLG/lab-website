@@ -220,7 +220,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <Link href="/about#aifin-center" className="block group">
+              <Link href="/about#aifin-center" className="block group" onClick={() => window.scrollTo(0, 0)}>
                 <div className="glass-card rounded-2xl overflow-hidden transition-all duration-500 hover:border-primary/20 hover:shadow-[0_8px_40px_oklch(0.52_0.18_270_/_10%)]">
                   <div className="aspect-[16/9] overflow-hidden">
                     <img
@@ -258,7 +258,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <Link href="/about#aippe-center" className="block group">
+              <Link href="/about#aippe-center" className="block group" onClick={() => window.scrollTo(0, 0)}>
                 <div className="glass-card rounded-2xl overflow-hidden transition-all duration-500 hover:border-[oklch(0.55_0.12_200_/_20%)] hover:shadow-[0_8px_40px_oklch(0.55_0.12_200_/_10%)]">
                   <div className="aspect-[16/9] overflow-hidden">
                     <img
@@ -316,7 +316,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <Link href="/about#llm-lab" className="block group">
+            <Link href="/about#llm-lab" className="block group" onClick={() => window.scrollTo(0, 0)}>
               <div className="glass-card rounded-2xl overflow-hidden transition-all duration-500 hover:border-accent/20 hover:shadow-[0_8px_40px_oklch(0.7_0.15_100_/_10%)]">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-8 lg:p-12">
                   <div className="aspect-[16/9] overflow-hidden rounded-xl">
@@ -372,6 +372,7 @@ export default function Home() {
             <Link
               href="/news"
               className="inline-flex items-center gap-2 text-sm text-primary font-medium hover:gap-3 transition-all"
+              onClick={() => window.scrollTo(0, 0)}
             >
               {t("news.viewAll")} <ArrowRight size={16} />
             </Link>
@@ -390,6 +391,7 @@ export default function Home() {
                 <Link
                   href={`/news/${item.id}`}
                   className="group flex flex-col glass-card rounded-2xl p-6 transition-all duration-500 hover:border-primary/15 hover:-translate-y-1 w-full"
+                  onClick={() => window.scrollTo(0, 0)}
                 >
                   <time className="text-xs text-primary font-medium tracking-wider mb-3 block">
                     {item.date}
