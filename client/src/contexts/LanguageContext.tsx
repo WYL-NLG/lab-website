@@ -71,7 +71,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       "about.aifinDesc2": { zh: "学院将建设 AI-Fin 研究中心，聚焦人工智能在金融领域的各项应用，研究怎样融合金融学的理论与人工智能的技术提升金融服务的效率并兼顾公平公正与伦理，未来将发布上海人工智能金融指数（Shanghai AI-Finance Index）和年度报告。", en: "The school will establish the AI-Fin Research Center, focusing on various applications of AI in finance, researching how to integrate financial theory with AI technology to improve service efficiency while maintaining fairness and ethics. The Shanghai AI-Finance Index and annual reports will be published in the future." },
       "about.aippe": { zh: "硅基经济", en: "Silicon Economy" },
       "about.aippeFull": { zh: "硅基经济", en: "Silicon-based Economy" },
-      "about.aippeCenter": { zh: "硅基经济研究中心", en: "Silicon-based Economy Research Center" },
+      "about.aippeCenter": { zh: "SI-ECON（硅基经济）研究中心", en: "Silicon-based Economy Research Center" },
       "about.aippeDesc": { zh: "硅基经济研究中心聚焦于数字经济与AI技术的深度融合，研究AI如何重塑传统经济模式、价值创造方式和产业组织形式。中心将深入探讨数据要素的价值实现机制、智能合约的经济逻辑、数字资产的价值评估理论，以及AI驱动的新业态新模式，为数字时代的经济治理提供理论支撑和政策建议。", en: "The Silicon-based Economy Research Center focuses on the deep integration of digital economy and AI technology, researching how AI is reshaping traditional economic models, value creation methods, and industrial organization forms. The center will explore the value realization mechanisms of data elements, economic logic of smart contracts, value assessment theories of digital assets, and AI-driven new business models and formats." },
       "about.llm": { zh: "金融大模型实验室", en: "Large Language Model Lab" },
       "about.llmFull": { zh: "金融大语言模型", en: "Financial Large Language Model" },

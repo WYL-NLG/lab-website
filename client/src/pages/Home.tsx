@@ -273,7 +273,7 @@ export default function Home() {
                         <CircuitBoard size={20} className="text-[oklch(0.55_0.12_200)]" />
                       </div>
                       <h3 className="text-xl font-display text-foreground">
-                        {language === "zh" ? "硅基经济研究中心" : "Silicon-based Economy Research Center"}
+                        {language === "zh" ? "SI-ECON 研究中心" : "Silicon-based Economy Research Center"}
                       </h3>
                     </div>
                     <p className="text-sm text-muted-foreground leading-relaxed mb-4">
