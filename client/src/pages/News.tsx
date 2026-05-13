@@ -6,33 +6,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Calendar, ArrowRight, Search, X } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
-
-const news = [
-  {
-    id: "1",
-    date: "2026-03-24",
-    titleZh: "华东师范大学校长马余刚院士一行调研上海人工智能金融学院",
-    titleEn: "Dean Ma Yugang of ECNU Visits Shanghai AI-Finance School",
-    excerptZh: "2026年3月24日上午，华东师范大学校长、中国科学院院士马余刚率队赴上海人工智能金融学院（SAIFS）开展专项调研...",
-    excerptEn: "On the morning of March 24, 2026, Dean Ma Yugang of ECNU led a team to visit SAIFS for a special research session...",
-  },
-  {
-    id: "2",
-    date: "2026-03-18",
-    titleZh: "你的工作，AI还需要多久才能接手？",
-    titleEn: "How Long Before AI Takes Over Your Job?",
-    excerptZh: "上周，Andrej Karpathy（特斯拉前 AI 总监）给 342 个美国职业打了 AI 替代风险分，高暴露岗位涉及工资总额高达 3.7 万亿美元...",
-    excerptEn: "Last week, Andrej Karpathy (former Tesla AI Director) scored 342 US occupations for AI replacement risk...",
-  },
-  {
-    id: "3",
-    date: "2026-03-04",
-    titleZh: "邵怡蕾｜AI改写历史终结：从技术-治理双曲线到人工智能素养与人文素养并进的双框架",
-    titleEn: "Shao Yilei | AI Rewrites the End of History",
-    excerptZh: "人工智能正在重启被福山宣告终结的历史。以'技术-治理'双曲线为核心框架展开分析，可以发现技术指数攀升与治理线性迟滞之间存在'合法性鸿沟'...",
-    excerptEn: "AI is restarting history declared ended by Fukuyama. Using the 'technology-governance' dual curve framework...",
-  },
-];
+import { newsList } from "../data/newsData";
 
 export default function News() {
   const { language, t } = useLanguage();
@@ -40,7 +14,8 @@ export default function News() {
   const [yearFilter, setYearFilter] = useState("");
 
   const filteredNews = useMemo(() => {
-    return news.filter((item) => {
+    const sortedNews = [...newsList].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    return sortedNews.filter((item) => {
       const title = language === "zh" ? item.titleZh : item.titleEn;
       const excerpt = language === "zh" ? item.excerptZh : item.excerptEn;
       const matchesKeyword =

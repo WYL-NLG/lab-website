@@ -6,10 +6,14 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight, Brain, CircuitBoard, Cpu, ChevronRight } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
+import { newsList } from "../data/newsData";
 
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663030386668/VtxKsVYCNS3ckeWH93PHhR/hero-bg-8MkQpmoFr4Tq8bpGQcTRtQ.webp";
-const AI_FIN_IMG = "/avatars/AI-FIN.png";
-const AI_PPE_IMG = "/avatars/AI-PPE.png";
+const AI_FIN_IMG = "/avatars/网页插图/AI-FIN.png";
+const AI_PPE_IMG = "/avatars/网页插图/AI-PPE.png";
+const SI_ECON_IMG = "/avatars/网页插图/SI-ECON.png";
+const FIN_LLM_LAB_IMG = "/avatars/网页插图/fin llm lab.png";
+const JOIN_US_IMG = "/avatars/网页插图/加入我们image.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -25,33 +29,6 @@ const stats = [
   { zh: { value: "3", label: "研究中心" }, en: { value: "3", label: "Research Centers" } },
   { zh: { value: "11+", label: "核心成员" }, en: { value: "11+", label: "Core Members" } },
   { zh: { value: "全球首家", label: "AI-Fin 学院" }, en: { value: "World's First", label: "AI-Fin School" } },
-];
-
-const news = [
-  {
-    id: "1",
-    date: "2026-03-24",
-    titleZh: "华东师范大学校长马余刚院士一行调研上海人工智能金融学院",
-    titleEn: "Dean Ma Yugang of ECNU Visits Shanghai AI-Finance School",
-    excerptZh: "2026年3月24日上午，华东师范大学校长、中国科学院院士马余刚率队赴上海人工智能金融学院（SAIFS）开展专项调研...",
-    excerptEn: "On the morning of March 24, 2026, Dean Ma Yugang of ECNU led a team to visit SAIFS for a special research session...",
-  },
-  {
-    id: "2",
-    date: "2026-03-18",
-    titleZh: "你的工作，AI还需要多久才能接手？",
-    titleEn: "How Long Before AI Takes Over Your Job?",
-    excerptZh: "上周，Andrej Karpathy（特斯拉前 AI 总监）给 342 个美国职业打了 AI 替代风险分，高暴露岗位涉及工资总额高达 3.7 万亿美元...",
-    excerptEn: "Last week, Andrej Karpathy (former Tesla AI Director) scored 342 US occupations for AI replacement risk...",
-  },
-  {
-    id: "3",
-    date: "2026-03-04",
-    titleZh: "邵怡蕾｜AI改写历史终结：从技术-治理双曲线到人工智能素养与人文素养并进的双框架",
-    titleEn: "Shao Yilei | AI Rewrites the End of History",
-    excerptZh: "人工智能正在重启被福山宣告终结的历史。以'技术-治理'双曲线为核心框架展开分析，可以发现技术指数攀升与治理线性迟滞之间存在'合法性鸿沟'...",
-    excerptEn: "AI is restarting history declared ended by Fukuyama. Using the 'technology-governance' dual curve framework...",
-  },
 ];
 
 export default function Home() {
@@ -262,7 +239,7 @@ export default function Home() {
                 <div className="glass-card rounded-2xl overflow-hidden transition-all duration-500 hover:border-[oklch(0.55_0.12_200_/_20%)] hover:shadow-[0_8px_40px_oklch(0.55_0.12_200_/_10%)]">
                   <div className="aspect-[16/9] overflow-hidden">
                     <img
-                      src="/avatars/SI-ECON.png"
+                      src={SI_ECON_IMG}
                       alt="Silicon-based Economy Research Center"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
@@ -321,7 +298,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-8 lg:p-12">
                   <div className="aspect-[16/9] overflow-hidden rounded-xl">
                     <img
-                      src="/avatars/fin llm lab.png"
+                      src={FIN_LLM_LAB_IMG}
                       alt="Financial LLM Lab"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
@@ -379,7 +356,7 @@ export default function Home() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {news.slice(0, 3).map((item, i) => (
+            {[...newsList].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 3).map((item, i) => (
               <motion.div
                 key={item.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -426,7 +403,7 @@ export default function Home() {
           >
             <div className="absolute inset-0">
               <img
-                src="/avatars/加入我们image.png"
+                src={JOIN_US_IMG}
                 alt="Join Us"
                 className="w-full h-full object-cover"
               />
