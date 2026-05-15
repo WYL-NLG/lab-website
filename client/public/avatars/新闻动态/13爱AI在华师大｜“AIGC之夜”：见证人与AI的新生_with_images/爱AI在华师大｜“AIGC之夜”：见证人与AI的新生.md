@@ -8,19 +8,19 @@
 
 ---
 
-![文章图片](images/image1.other)
+![文章图片](images/image1.jpg)
 
-![文章图片](images/image2.other)
+![文章图片](images/image2.jpg)
 
 “AIGC之夜：人与AI的新生”活动
 
   
 
-![文章图片](images/image3.other)
+![文章图片](images/image3.png)
 
 6月1日晚，由华东师大上海人工智能金融学院和经济与管理学院共同举办，华东师范大学奇点研究院协办的“AIGC之夜：人与AI的新生”活动在校友之家绿地草坪举行。华东师大校长、中国工程院院士钱旭红，中国农业银行上海市分行党委书记、行长韩国强，上海纽约大学校长童世骏，华东师大党委副书记孟钟捷，悉尼科技大学副校长张成奇，虹口区委常委、宣传部部长吴强，虹口区委宣传部副部长、区委网信办主任边频，麻省理工学院教授、生命未来研究所创始人迈克斯·泰格马克，牛津大学人类未来研究所人工智能治理中心研究员、安远AI创始人兼CEO谢旻希，华东师大党委宣传部常务副部长刘麒，产业技术研究院执行院长邢和祥，经济与管理学院院长殷德生，上海人工智能金融学院院长邵怡蕾，政治与国际关系学院院长吴冠军，当代中国著名电影研究者、华东师大国际汉语文化学院教授毛尖，复旦大学中文系教授、科学杂志《新发现》主编严锋，Midjourney中国区副总裁、小船创意（上海）网络技术有限公司CEO王玥婷，新世相创始人张伟，AIGC艺术家及师生代表出席活动。活动由上海人民广播电台主持人徐梓嘉主持。
 
-![文章图片](images/image4.other)
+![文章图片](images/image4.png)
 
   
 
@@ -32,19 +32,19 @@
 
   
 
-![文章图片](images/image5.other)
+![文章图片](images/image5.jpg)
 
 徐梓嘉主持活动
 
-![文章图片](images/image3.other)
+![文章图片](images/image3.png)
 
 AIGC作为人工智能的主要分支，应用领域非常广泛，其逐步改变着传统的内容创作、生产和分发方式。AI艺术是AIGC应用的重要表现形式，艺术作为人类情感与智慧的结晶，与AI的结合，无疑将开启一个全新的创作时代。AI艺术不仅拓展了艺术的边界，也为我们提供了全新的视角和思考方式，在艺术创作、科学研究及经济发展等多领域展现出巨大潜力。作为华东师大上海人工智能金融学院首届学术年会的重要部分，“AIGC之夜”活动进一步深化人工智能创新应用的探索，延续科技与人文跨学科交叉思维的交流与碰撞。  
 
   
 
-![文章图片](images/image6.other)
+![文章图片](images/image6.png)
 
-![文章图片](images/image7.other)
+![文章图片](images/image7.jpg)
 
 孟钟捷致辞
 
@@ -54,7 +54,7 @@ AIGC作为人工智能的主要分支，应用领域非常广泛，其逐步改�
 
   
 
-![文章图片](images/image8.other)
+![文章图片](images/image8.jpg)
 
 邵怡蕾致辞
 
@@ -64,7 +64,7 @@ AIGC作为人工智能的主要分支，应用领域非常广泛，其逐步改�
 
   
 
-![文章图片](images/image9.other)
+![文章图片](images/image9.jpg)
 
 现场讲演、视频展示
 
@@ -74,7 +74,7 @@ AIGC作为人工智能的主要分支，应用领域非常广泛，其逐步改�
 
   
 
-![文章图片](images/image10.other)
+![文章图片](images/image10.jpg)
 
 现场对谈
 
@@ -88,55 +88,55 @@ AIGC作为人工智能的主要分支，应用领域非常广泛，其逐步改�
 
   
 
-![文章图片](images/image12.other)
+![文章图片](images/image12.jpg)
 
-![文章图片](images/image13.other)
-
-  
-
-![文章图片](images/image4.other)
+![文章图片](images/image13.jpg)
 
   
 
-![文章图片](images/image3.other)
-
-![文章图片](images/image14.other)
-
-![文章图片](images/image15.other)
+![文章图片](images/image4.png)
 
   
 
-![文章图片](images/image11.gif)
+![文章图片](images/image3.png)
 
-![文章图片](images/image16.other)
+![文章图片](images/image14.png)
 
-  
-
-![文章图片](images/image17.other)
-
-![文章图片](images/image15.other)
+![文章图片](images/image15.png)
 
   
 
 ![文章图片](images/image11.gif)
 
-![文章图片](images/image18.other)
+![文章图片](images/image16.png)
+
+  
+
+![文章图片](images/image17.png)
+
+![文章图片](images/image15.png)
+
+  
+
+![文章图片](images/image11.gif)
+
+![文章图片](images/image18.png)
 
   
 
   
 
-![文章图片](images/image19.other)
+![文章图片](images/image19.png)
 
 AI艺术家作品（创作主题:爱AI在华师大）
 
-![文章图片](images/image20.other)
+![文章图片](images/image20.jpg)
 
-![文章图片](images/image21.other)
+![文章图片](images/image21.jpg)
 
-![文章图片](images/image22.other)
+![文章图片](images/image22.jpg)
 
-![文章图片](images/image23.other)
+![文章图片](images/image23.jpg)
 
 严锋、吴冠军、毛尖、邵怡蕾点评
 
@@ -144,17 +144,17 @@ AI艺术家作品（创作主题:爱AI在华师大）
 
 AIGC现场实时创作比拼中，徐滋悦（ID：STEAMCHI蒸汽姬）、陈星任（ID:麦橘MERJIC）、魏申（ID:猫叔）、陈慧凌（ID：陈慧凌）、金宇（ID：酒鬼橋-BoozerBridge）、刘佳（ID：南墙\_Rylee）六位AIGC高水平创作者，根据“时间的滋味”“一千个吃棒棒糖的大学生”“再见智人”“爱AI在华师大”“01”等即兴命题进行提示词挑战与限时创作，创作过程和成果实时全方位展示给现场观众，人与技术的合作展现了AI技术在艺术创作中的即时性与互动性。竞赛中创作者逐一呈现了文生图创作作品，创作者的作品赋予自然语言全新的视角，通过AI技术传递出人对艺术的解读。严锋、吴冠军、毛尖、邵怡蕾对即兴命题进行概念解析，并逐一点评创作者作品。
 
-![文章图片](images/image4.other)
+![文章图片](images/image4.png)
 
   
 
-![文章图片](images/image24.other)
+![文章图片](images/image24.jpg)
 
   
 
 ![文章图片](images/image25.png)
 
-![文章图片](images/image26.other)
+![文章图片](images/image26.jpg)
 
 跨学科圆桌论坛
 
@@ -164,9 +164,9 @@ AIGC现场实时创作比拼中，徐滋悦（ID：STEAMCHI蒸汽姬）、陈星
 
   
 
-![文章图片](images/image27.other)  
+![文章图片](images/image27.jpg)  
 
-![文章图片](images/image28.other)
+![文章图片](images/image28.jpg)
 
 活动现场
 

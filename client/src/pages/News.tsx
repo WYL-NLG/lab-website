@@ -4,14 +4,18 @@
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { Calendar, ArrowRight, Search, X } from "lucide-react";
+import { Calendar, ArrowRight, Search, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { newsList } from "../data/newsData";
+
+const PAGE_SIZE = 15;
 
 export default function News() {
   const { language, t } = useLanguage();
   const [keyword, setKeyword] = useState("");
   const [yearFilter, setYearFilter] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [customPage, setCustomPage] = useState("");
 
   const filteredNews = useMemo(() => {
     const sortedNews = [...newsList].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
@@ -27,9 +31,37 @@ export default function News() {
     });
   }, [keyword, yearFilter, language]);
 
+  const totalPages = Math.max(1, Math.ceil(filteredNews.length / PAGE_SIZE));
+  const paginatedNews = useMemo(() => {
+    const start = (currentPage - 1) * PAGE_SIZE;
+    return filteredNews.slice(start, start + PAGE_SIZE);
+  }, [filteredNews, currentPage]);
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handleCustomPage = (e: React.FormEvent) => {
+    e.preventDefault();
+    const pageNum = parseInt(customPage, 10);
+    if (!isNaN(pageNum) && pageNum >= 1 && pageNum <= totalPages) {
+      setCurrentPage(pageNum);
+      setCustomPage("");
+    }
+  };
+
   const clearFilters = () => {
     setKeyword("");
     setYearFilter("");
+    setCurrentPage(1);
   };
 
   const hasActiveFilters = keyword || yearFilter;
@@ -144,14 +176,14 @@ export default function News() {
       <section className="pb-28">
         <div className="container">
           <div className="flex flex-col gap-4">
-            {filteredNews.length === 0 ? (
+            {paginatedNews.length === 0 ? (
               <div className="text-center py-12">
                 <p className="text-muted-foreground">
                   {language === "zh" ? "没有找到匹配的新闻" : "No matching news found"}
                 </p>
               </div>
             ) : (
-              filteredNews.map((item, i) => (
+              paginatedNews.map((item, i) => (
                 <motion.div
                   key={item.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -181,6 +213,59 @@ export default function News() {
               ))
             )}
           </div>
+
+          {filteredNews.length > 0 && totalPages > 1 && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mt-8 flex items-center justify-center gap-4"
+            >
+              <button
+                onClick={handlePrevPage}
+                disabled={currentPage === 1}
+                className="flex items-center gap-2 px-4 py-2 rounded-lg border border-border text-sm font-medium transition-all hover:bg-primary hover:text-primary-foreground disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-inherit"
+              >
+                <ChevronLeft size={16} />
+                {language === "zh" ? "上一页" : "Previous"}
+              </button>
+
+              <span className="text-sm text-muted-foreground">
+                {language === "zh" ? "第" : "Page"} {currentPage} {language === "zh" ? "页" : ""} {language === "zh" ? "共" : "of"} {totalPages} {language === "zh" ? "页" : ""}
+              </span>
+
+              <button
+                onClick={handleNextPage}
+                disabled={currentPage === totalPages}
+                className="flex items-center gap-2 px-4 py-2 rounded-lg border border-border text-sm font-medium transition-all hover:bg-primary hover:text-primary-foreground disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-inherit"
+              >
+                {language === "zh" ? "下一页" : "Next"}
+                <ChevronRight size={16} />
+              </button>
+
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-muted-foreground">
+                  {language === "zh" ? "跳转到" : "Go to"}
+                </span>
+                <form onSubmit={handleCustomPage} className="flex items-center gap-2">
+                  <input
+                    type="number"
+                    min="1"
+                    max={totalPages}
+                    value={customPage}
+                    onChange={(e) => setCustomPage(e.target.value)}
+                    placeholder={currentPage.toString()}
+                    className="w-16 px-3 py-2 rounded-lg border border-border text-sm text-center focus:outline-none focus:ring-2 focus:ring-primary/20"
+                  />
+                  <button
+                    type="submit"
+                    className="px-3 py-2 rounded-lg border border-border text-sm font-medium transition-all hover:bg-primary hover:text-primary-foreground"
+                  >
+                    {language === "zh" ? "跳转" : "Go"}
+                  </button>
+                </form>
+              </div>
+            </motion.div>
+          )}
         </div>
       </section>
     </div>
