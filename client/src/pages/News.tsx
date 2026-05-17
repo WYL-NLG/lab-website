@@ -184,13 +184,7 @@ export default function News() {
               </div>
             ) : (
               paginatedNews.map((item, i) => (
-                <motion.div
-                  key={item.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1, duration: 0.6 }}
-                >
+                <div key={item.id}>
                   <Link
                     href={`/news/${item.id}`}
                     className="group block glass-card rounded-2xl p-6 lg:p-8 transition-all duration-500 hover:border-primary/15 hover:-translate-y-1"
@@ -209,8 +203,8 @@ export default function News() {
                       {language === "zh" ? "阅读更多" : "Read More"} <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                     </div>
                   </Link>
-                </motion.div>
-              ))
+              </div>
+            ))
             )}
           </div>
 

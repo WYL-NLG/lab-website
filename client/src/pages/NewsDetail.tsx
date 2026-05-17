@@ -56,24 +56,6 @@ const newsData: Record<string, {
     images: [],
     showHeader: true
   },
-  "11": {
-    date: "2026-05-08",
-    title: "文理交叉跨学科培育项目 | 汤傲成助理教授：《AI职业暴露与劳动力市场重构——多维异质性分析与多智能体动态仿真》",
-    content: `以大语言模型为核心的生成式人工智能技术自2022年底以来快速扩散，深刻改变了全球劳动力市场的任务分工结构。在此背景下，<strong>智金院助理教授汤傲成撰写的《AI职业暴露与劳动力市场重构——多维异质性分析与多智能体动态仿真》</strong>入选华东师范大学文理交叉跨学科培育项目。本项目旨在构建系统刻画人工智能对就业结构影响的多维分析框架，重点揭示高暴露与低暴露岗位群体之间的结构性分化机制及其对就业结构转型的深层含义，为相关政策制定提供基于扎实实证的科学依据。`,
-    images: [
-      "/avatars/新闻动态/文理交叉跨学科培育项目 _ 汤傲成助理教授：《AI职业暴露与劳动力市场重构——多维异质性分析与多智能体动态仿真》_with_images/image2.png"
-    ],
-    showHeader: true
-  },
-  "12": {
-    date: "2026-05-08",
-    title: "精品力作培育项目 | 邵怡蕾教授：《硅基经济学——面向AGI时代的中国自主经济学理论体系建构》",
-    content: `当下，建立在西方新古典经济学碳基假设之上的既有理论框架已难以有效解释AGI带来的深层冲击，中国在AGI经济学领域也面临自主理论体系的缺位。在此背景下，<strong>智金院邵怡蕾教授主持撰写的《硅基经济学——面向AGI时代的中国自主经济学理论体系建构》</strong>入选华东师范大学中国自主知识体系精品力作培育项目。项目将以此为契机，致力于建立硅基经济学基础理论框架，为中国AGI时代的政策制定提供理论依据，并为构建AGI时代中国自主经济学知识体系奠定学科基础。`,
-    images: [
-      "/avatars/新闻动态/精品力作培育项目 _ 邵怡蕾教授：《硅基经济学——面向AGI时代的中国自主经济学理论体系建构》_with_images/image2.jpeg"
-    ],
-    showHeader: true
-  },
   "3": {
     date: "2026-03-04",
     title: "邵怡蕾｜AI改写历史终结：从技术-治理双曲线到人工智能素养与人文素养并进的双框架",
@@ -189,7 +171,28 @@ const newsData: Record<string, {
   "33": {
     date: "2024-07-31",
     title: "中国农业银行总行副行长徐瀚一行调研SAIFS金融大语言模型实验室",
-    content: "<div style='display: flex; justify-content: center; margin-bottom: 16px;'><img src='/avatars/新闻动态/20中国农业银行总行副行长徐瀚一行调研SAIFS金融大语言模型实验室_with_images/images/image2.jpeg' alt='' style='max-width: 60%; height: auto;'/></div><br/>7月30日上午，中国农业银行总行副行长徐瀚，中国农业银行上海分行行长韩国强一行调研华东师范大学上海人工智能金融学院金融大语言模型实验室（FinLLM Lab）。华东师范大学党委书记梅兵，经济与管理学院院长殷德生，上海人工智能金融学院院长邵怡蕾、院长助理汤傲成出席并陪同总行徐瀚副行长一行调研。<br/><br/><div style='display: flex; justify-content: center; margin-bottom: 16px;'><img src='/avatars/新闻动态/20中国农业银行总行副行长徐瀚一行调研SAIFS金融大语言模型实验室_with_images/images/image3.jpeg' alt='' style='max-width: 60%; height: auto;'/></div><p style='text-align: center; font-size: 14px; color: #666;'>邵怡蕾院长介绍学院规划和实验室建设</p><br/><br/>首先，智金院邵怡蕾院长向徐瀚副行长一行介绍学院的建设规划。据邵怡蕾院长介绍，学院将设置人工智能金融专业硕士、人工智能金融MBA及博士项目，项目预计将于2024年9月开启试点，2025年正式启动。智金院作为全球首家专注于人工智能与金融跨界教育和研究的机构，课程涵盖人工智能及大语言模型通识课、机器学习/神经网络基础、人工智能在金融中的应用、金融大语言模型（FinLLM）实验室工作坊、人工智能的社会经济与伦理影响、人工智能技术在金融中的合规管理、人工智能领导力与变革管理等内容，全面提升学生在人工智能时代的创新与创业的综合能力。<br/><br/>在研究中心建设方面，学院将设立AI-Fin和AI-PPE两个研究中心，致力于推进人工智能在金融及全球哲学-政治学-经济学的研究和应用。<br/><br/><div style='display: flex; justify-content: center; margin-bottom: 16px;'><img src='/avatars/新闻动态/20中国农业银行总行副行长徐瀚一行调研SAIFS金融大语言模型实验室_with_images/images/image4.jpeg' alt='' style='max-width: 60%; height: auto;'/></div><p style='text-align: center; font-size: 14px; color: #666;'>智金院助理研究员汪俊霖介绍金融智能体AI Jason</p><br/><br/>随后，智金院助理研究员汪俊霖向徐瀚副行长一行介绍了SAIFS研发的全球领先的金融垂类大语言模型，以及金融智能体AI Jason。AI Jason被赋予了专业金融人士的思维模式，凭借其金融理解、洞察、表现力、逻辑及数据五大优势，能有效支持金融分析、风险管理和客户洞察等工作。邵怡蕾院长与汪俊霖进一步解析AI Jason的革新技术路径及其三大核心技术优势，并深入阐述AI Jason如何以小而美的方式精准切入关键业务节点，解决通用大语言模型的幻觉问题，以可信、安全的方式赋能大型金融机构的各项场景。<br/><br/><div style='display: flex; justify-content: center; margin-bottom: 16px;'><img src='/avatars/新闻动态/20中国农业银行总行副行长徐瀚一行调研SAIFS金融大语言模型实验室_with_images/images/image5.jpeg' alt='' style='max-width: 60%; height: auto;'/></div><p style='text-align: center; font-size: 14px; color: #666;'>徐瀚副行长一行与邵怡蕾院长相互交流意见</p><br/><br/>在调研的尾声，徐瀚副行长对实验室的建设和规划发展方向给予了高度肯定。他指出，人工智能在金融领域的应用正在迅速扩展，将为人类的生产和生活带来显著的创新与变革。在交流过程中，他肯定了AI Jason在金融分析、风险管理和客户洞察方面的潜力，同时鼓励实验室未来通过结合金融逻辑和大模型应用，实现更高效的金融分析和预测。他还就实验室的阶段性成果进行了深入交流，并分享了大型商业银行以及金融机构在智能化发展、业务效率和竞争力提升、数据安全和隐私保护等方面的经验和未来展望。<br/><br/><div style='display: flex; justify-content: center; margin-bottom: 16px;'><img src='/avatars/新闻动态/20中国农业银行总行副行长徐瀚一行调研SAIFS金融大语言模型实验室_with_images/images/image6.jpeg' alt='' style='max-width: 60%; height: auto;'/></div><p style='text-align: center; font-size: 14px; color: #666;'>参观陈彪如学术成就陈列室</p><br/><br/>实验室调研之前，邵怡蕾院长陪同徐瀚副行长一行参观了陈彪如学术成就陈列室和华东师范大学上海人工智能金融学院。<br/><br/><div style='display: flex; justify-content: center; margin-bottom: 16px;'><img src='/avatars/新闻动态/20中国农业银行总行副行长徐瀚一行调研SAIFS金融大语言模型实验室_with_images/images/image7.jpeg' alt='' style='max-width: 60%; height: auto;'/></div><br/><div style='display: flex; justify-content: center; margin-bottom: 16px;'><img src='/avatars/新闻动态/20中国农业银行总行副行长徐瀚一行调研SAIFS金融大语言模型实验室_with_images/images/image8.jpeg' alt='' style='max-width: 60%; height: auto;'/></div><br/><p style='text-align: right;'>图文：华东师范大学上海人工智能金融学院、经济与管理学院</p>",
+    content: "<div style='display: flex; justify-content: center; margin-bottom: 16px;'><img src='/avatars/新闻动态/20中国农业银行总行副行长徐瀚一行调研SAIFS金融大语言模型实验室_with_images/images/image2.jpeg' alt='' style='max-width: 60%; height: auto;'/></div><br/>7月30日上午，中国农业银行总行副行长徐瀚，中国农业银行上海分行行长韩国强一行调研华东师范大学上海人工智能金融学院金融大语言模型实验室（FinLLM Lab）。华东师范大学党委书记梅兵，经济与管理学院院长殷德生，上海人工智能金融学院院长邵怡蕾、院长助理汤傲成出席并陪同总行徐瀚副行长一行调研。<br/><br/><div style='display: flex; justify-content: center; margin-bottom: 16px;'><img src='/avatars/新闻动态/20中国农业银行总行副行长徐瀚一行调研SAIFS金融大语言模型实验室_with_images/images/image3.jpeg' alt='' style='max-width: 60%; height: auto;'/></div><p style='text-align: center; font-size: 14px; color: #1a56db;'>邵怡蕾院长介绍学院规划和实验室建设</p><br/><br/>首先，智金院邵怡蕾院长向徐瀚副行长一行介绍学院的建设规划。据邵怡蕾院长介绍，学院将设置人工智能金融专业硕士、人工智能金融MBA及博士项目，项目预计将于2024年9月开启试点，2025年正式启动。智金院作为全球首家专注于人工智能与金融跨界教育和研究的机构，课程涵盖人工智能及大语言模型通识课、机器学习/神经网络基础、人工智能在金融中的应用、金融大语言模型（FinLLM）实验室工作坊、人工智能的社会经济与伦理影响、人工智能技术在金融中的合规管理、人工智能领导力与变革管理等内容，全面提升学生在人工智能时代的创新与创业的综合能力。<br/><br/>在研究中心建设方面，学院将设立AI-Fin和AI-PPE两个研究中心，致力于推进人工智能在金融及全球哲学-政治学-经济学的研究和应用。<br/><br/><div style='display: flex; justify-content: center; margin-bottom: 16px;'><img src='/avatars/新闻动态/20中国农业银行总行副行长徐瀚一行调研SAIFS金融大语言模型实验室_with_images/images/image4.jpeg' alt='' style='max-width: 60%; height: auto;'/></div><p style='text-align: center; font-size: 14px; color: #1a56db;'>智金院助理研究员汪俊霖介绍金融智能体AI Jason</p><br/><br/>随后，智金院助理研究员汪俊霖向徐瀚副行长一行介绍了SAIFS研发的全球领先的金融垂类大语言模型，以及金融智能体AI Jason。AI Jason被赋予了专业金融人士的思维模式，凭借其金融理解、洞察、表现力、逻辑及数据五大优势，能有效支持金融分析、风险管理和客户洞察等工作。邵怡蕾院长与汪俊霖进一步解析AI Jason的革新技术路径及其三大核心技术优势，并深入阐述AI Jason如何以小而美的方式精准切入关键业务节点，解决通用大语言模型的幻觉问题，以可信、安全的方式赋能大型金融机构的各项场景。<br/><br/><div style='display: flex; justify-content: center; margin-bottom: 16px;'><img src='/avatars/新闻动态/20中国农业银行总行副行长徐瀚一行调研SAIFS金融大语言模型实验室_with_images/images/image5.jpeg' alt='' style='max-width: 60%; height: auto;'/></div><p style='text-align: center; font-size: 14px; color: #1a56db;'>徐瀚副行长一行与邵怡蕾院长相互交流意见</p><br/><br/>在调研的尾声，徐瀚副行长对实验室的建设和规划发展方向给予了高度肯定。他指出，人工智能在金融领域的应用正在迅速扩展，将为人类的生产和生活带来显著的创新与变革。在交流过程中，他肯定了AI Jason在金融分析、风险管理和客户洞察方面的潜力，同时鼓励实验室未来通过结合金融逻辑和大模型应用，实现更高效的金融分析和预测。他还就实验室的阶段性成果进行了深入交流，并分享了大型商业银行以及金融机构在智能化发展、业务效率和竞争力提升、数据安全和隐私保护等方面的经验和未来展望。<br/><br/><div style='display: flex; justify-content: center; margin-bottom: 16px;'><img src='/avatars/新闻动态/20中国农业银行总行副行长徐瀚一行调研SAIFS金融大语言模型实验室_with_images/images/image6.jpeg' alt='' style='max-width: 60%; height: auto;'/></div><p style='text-align: center; font-size: 14px; color: #1a56db;'>参观陈彪如学术成就陈列室</p><br/><br/>实验室调研之前，邵怡蕾院长陪同徐瀚副行长一行参观了陈彪如学术成就陈列室和华东师范大学上海人工智能金融学院。<br/><br/><div style='display: flex; justify-content: center; margin-bottom: 16px;'><img src='/avatars/新闻动态/20中国农业银行总行副行长徐瀚一行调研SAIFS金融大语言模型实验室_with_images/images/image7.jpeg' alt='' style='max-width: 60%; height: auto;'/></div><br/><div style='display: flex; justify-content: center; margin-bottom: 16px;'><img src='/avatars/新闻动态/20中国农业银行总行副行长徐瀚一行调研SAIFS金融大语言模型实验室_with_images/images/image8.jpeg' alt='' style='max-width: 60%; height: auto;'/></div><br/><p style='text-align: right;'>图文：华东师范大学上海人工智能金融学院、经济与管理学院</p>",
+    images: [],
+    showHeader: true
+  },
+  "34": {
+    date: "2026-05-08",
+    title: "文理交叉跨学科培育项目 | 吴宗翰助理教授：《面向金融业智能体高质量数据集与评测基准研究》",
+    content: `<p style='text-indent: 2em;'>数据在数字经济时代已然成为新型生产要素，智能体技术成为激活数据要素潜能、驱动经济循环向"硅基模式"演进的关键变量，然而囿于智能体部署信任赤字问题，数据供给侧受到制约，通过智能体赋能金融行业发展进而发挥数据要素价值的路径受阻。在此背景下，<strong>智金院助理教授吴宗翰撰写的《面向金融业智能体高质量数据集与评测基准研究》</strong>入选华东师范大学文理交叉跨学科培育项目。本项目将回归数据集构造层面，建设完整覆盖"需求清单-数据集建设-评测基准构建-行业验证"全链条，加快面向金融业智能体的高质量数据集的构建，进而最大化释放数据要素驱动金融高质量发展的<span style='color: #1a56db;'>乘数效应</span>。</p><br/><div style='display: flex; justify-content: center; margin-bottom: 16px;'><img src='/avatars/新闻动态/77文理交叉跨学科培育项目 _ 吴宗翰助理教授：《面向金融业智能体高质量数据集与评测基准研究》_with_images/images/image2.png' alt='' style='max-width: 60%; height: auto;'/></div>`,
+    images: [],
+    showHeader: true
+  },
+  "35": {
+    date: "2026-05-08",
+    title: "精品力作培育项目 | 邵怡蕾教授：《硅基经济学——面向AGI时代的中国自主经济学理论体系建构》",
+    content: `<p style='text-indent: 2em;'>当下，建立在西方新古典经济学碳基假设之上的既有理论框架已难以有效解释AGI带来的深层冲击，中国在AGI经济学领域也面临自主理论体系的缺位。在此背景下，<strong>智金院邵怡蕾教授主持撰写的《硅基经济学——面向AGI时代的中国自主经济学理论体系建构》</strong>入选华东师范大学中国自主知识体系精品力作培育项目。项目将以此为契机，致力于建立硅基经济学基础理论框架，为中国AGI时代的政策制定提供理论依据，并为构建<span style='color: #1a56db;'>AGI</span>时代中国自主经济学知识体系奠定学科基础。</p><br/><div style='display: flex; justify-content: center; margin-bottom: 16px;'><img src='/avatars/新闻动态/76精品力作培育项目 _ 邵怡蕾教授：《硅基经济学——面向AGI时代的中国自主经济学理论体系建构》_with_images/images/image2.jpeg' alt='' style='max-width: 60%; height: auto;'/></div>`,
+    images: [],
+    showHeader: true
+  },
+  "36": {
+    date: "2026-05-08",
+    title: "文理交叉跨学科培育项目 | 汤傲成助理教授：《AI职业暴露与劳动力市场重构——多维异质性分析与多智能体动态仿真》",
+    content: `<p style='text-indent: 2em;'>以大语言模型为核心的生成式人工智能技术自2022年底以来快速扩散，深刻改变了全球劳动力市场的任务分工结构。在此背景下，<strong>智金院助理教授汤傲成撰写的《AI职业暴露与劳动力市场重构——多维异质性分析与多智能体动态仿真》</strong>入选华东师范大学文理交叉跨学科培育项目。本项目旨在构建系统刻画人工智能对就业结构影响的多维分析框架，重点揭示高暴露与低暴露岗位群体之间的结构性分化机制及其对就业结构转型的深层含义，为相关政策制定提供基于扎实实证的科学依据。</p><br/><div style='display: flex; justify-content: center; margin-bottom: 16px;'><img src='/avatars/新闻动态/75文理交叉跨学科培育项目 _ 汤傲成助理教授：《AI职业暴露与劳动力市场重构——多维异质性分析与多智能体动态仿真》_with_images/images/image2.png' alt='' style='max-width: 60%; height: auto;'/></div>`,
     images: [],
     showHeader: true
   }

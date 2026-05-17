@@ -110,3 +110,16 @@ temp/
 
 # Manus version file (auto-generated, not part of source)
 client/public/__manus__/version.json
+
+# Backup folders
+.manual-backup/
+.news-backups/
+*.bak
+
+# Windows special files
+nul
+con
+prn
+aux
+com[1-9]
+lpt[1-9]
