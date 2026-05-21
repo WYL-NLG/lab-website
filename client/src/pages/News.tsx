@@ -1,21 +1,72 @@
 /**
  * News Page — 最新动态 / News
  */
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
-import { Link } from "wouter";
+import { useLocation } from "wouter";
 import { Calendar, ArrowRight, Search, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { newsList } from "../data/newsData";
 
 const PAGE_SIZE = 15;
+const STORAGE_KEY = "news_page_state";
+
+interface NewsPageState {
+  newsId: string;
+  keyword: string;
+  yearFilter: string;
+  currentPage: number;
+}
 
 export default function News() {
   const { language, t } = useLanguage();
+  const [, setLocation] = useLocation();
   const [keyword, setKeyword] = useState("");
   const [yearFilter, setYearFilter] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [customPage, setCustomPage] = useState("");
+
+  useEffect(() => {
+    const savedState = sessionStorage.getItem(STORAGE_KEY);
+    if (savedState) {
+      try {
+        const parsedState: NewsPageState = JSON.parse(savedState);
+        setKeyword(parsedState.keyword);
+        setYearFilter(parsedState.yearFilter);
+        setCurrentPage(parsedState.currentPage);
+        
+        const interval = setInterval(() => {
+          const newsElement = document.getElementById(`news-${parsedState.newsId}`);
+          if (newsElement) {
+            newsElement.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+            });
+            clearInterval(interval);
+            sessionStorage.removeItem(STORAGE_KEY);
+          }
+        }, 50);
+        
+        setTimeout(() => {
+          clearInterval(interval);
+          sessionStorage.removeItem(STORAGE_KEY);
+        }, 3000);
+      } catch (e) {
+        sessionStorage.removeItem(STORAGE_KEY);
+      }
+    }
+  }, []);
+
+  const handleNewsClick = (newsId: string) => {
+    const state: NewsPageState = {
+      newsId,
+      keyword,
+      yearFilter,
+      currentPage,
+    };
+    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    setLocation(`/news/${newsId}`);
+  };
 
   const filteredNews = useMemo(() => {
     const sortedNews = [...newsList].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
@@ -63,6 +114,19 @@ export default function News() {
     setYearFilter("");
     setCurrentPage(1);
   };
+
+  useEffect(() => {
+    const savedState = sessionStorage.getItem(STORAGE_KEY);
+    if (!savedState) {
+      const timer = setTimeout(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [currentPage]);
 
   const hasActiveFilters = keyword || yearFilter;
 
@@ -184,10 +248,10 @@ export default function News() {
               </div>
             ) : (
               paginatedNews.map((item, i) => (
-                <div key={item.id}>
-                  <Link
-                    href={`/news/${item.id}`}
-                    className="group block glass-card rounded-2xl p-6 lg:p-8 transition-all duration-500 hover:border-primary/15 hover:-translate-y-1"
+                <div key={item.id} id={`news-${item.id}`}>
+                  <div
+                    onClick={() => handleNewsClick(item.id)}
+                    className="group block glass-card rounded-2xl p-6 lg:p-8 transition-all duration-500 hover:border-primary/15 hover:-translate-y-1 cursor-pointer"
                   >
                     <div className="flex items-start gap-4 mb-3">
                       <Calendar size={16} className="text-primary mt-1 shrink-0" />
@@ -202,7 +266,7 @@ export default function News() {
                     <div className="flex items-center gap-2 text-sm text-primary font-medium">
                       {language === "zh" ? "阅读更多" : "Read More"} <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                     </div>
-                  </Link>
+                  </div>
               </div>
             ))
             )}
