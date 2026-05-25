@@ -15,6 +15,17 @@ export interface NewsDetailItem extends NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "54",
+    folder: "64邵怡蕾｜AI改写“历史终结”：从技术–治理双曲线到人工智能素养与人文素养并进的双框架_with_images",
+    date: "2026-03-04",
+    titleZh: "邵怡蕾｜AI改写“历史终结”：从技术–治理双曲线到人工智能素养与人文素养并进的双框架",
+    titleEn: "",
+    excerptZh: "人工智能正在重启被福山宣告终结的历史。以“技术–治理”双曲线为核心框架展开分析，可以发现技术指数攀升与治理线性迟滞之间存在“合法性鸿沟”。",
+    excerptEn: "",
+    coverImage: "/avatars/新闻动态/64邵怡蕾｜AI改写“历史终结”：从技术–治理双曲线到人工智能素养与人文素养并进的双框架_with_images/images/cover.jpeg",
+  },
+
+  {
     id: "50",
     folder: "61联合国副秘书长、联合国开发计划署代理署长徐浩良与我院院长邵怡蕾、及多家知名高校、科研机构及企业代表共同探讨未来合作发展的新建议。_with_images",
     date: "2025-11-19",
