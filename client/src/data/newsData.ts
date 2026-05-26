@@ -15,6 +15,26 @@ export interface NewsDetailItem extends NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "80",
+    folder: "59外交部“第三期人工智能能力建设研讨班”学员访问上海人工智能金融产业研究院_with_images",
+    date: "2025-10-21",
+    titleZh: "外交部“第三期人工智能能力建设研讨班”学员访问上海人工智能金融产业研究院",
+    titleEn: "",
+    excerptZh: "2025年10月21日下午，由中国外交部主办、上海市人民政府协办、华东师范大学承办的“第三期人工智能能力建设研讨班”组织学员参访，来自21个国家的38名学员莅临位于徐汇区的“模速空间”，并参观了上海人工智能金融产业研究院。",
+    excerptEn: "",
+    coverImage: "/avatars/新闻动态/59外交部“第三期人工智能能力建设研讨班”学员访问上海人工智能金融产业研究院_with_images/images/cover.jpeg",
+  },
+  {
+    id: "79",
+    folder: "60我院院长邵怡蕾出席并主持UNU Macau AI Conference2025分论坛“AI与金融系统：赋能硅基经济的可持续发展”_with_images",
+    date: "2025-10-29",
+    titleZh: "我院院长邵怡蕾出席并主持UNU Macau AI Conference2025分论坛“AI与金融系统：赋能硅基经济的可持续发展”",
+    titleEn: "",
+    excerptZh: "2025年10月24日下午，由联合国大学驻澳门研究所（UNU Macau）主办的2025人工智能大会之分论坛“人工智能与金融系统：赋能硅基经济的可持续发展”在中国澳门银河国际会议中心成功举行。我院院长邵怡蕾教授发表主旨演讲并主持圆桌论坛。",
+    excerptEn: "",
+    coverImage: "/avatars/新闻动态/60我院院长邵怡蕾出席并主持UNU Macau AI Conference2025分论坛“AI与金融系统：赋能硅基经济的可持续发展”_with_images/images/cover.jpeg",
+  },
+  {
     id: "55",
     folder: "62上海升至全球金融科技中心第二，金融科技产业规模超4400亿元_with_images",
     date: "2025-11-29",
@@ -40,7 +60,7 @@ export const newsList: NewsItem[] = [
     date: "2025-11-19",
     titleZh: "联合国副秘书长、联合国开发计划署代理署长徐浩良与我院院长邵怡蕾、及多家知名高校、科研机构及企业代表共同探讨未来合作发展的新建议",
     titleEn: "",
-    excerptZh: "联合国副秘书长、联合国开发计划署代理署长徐浩良昨日结束对华正式访问。此次访问重申了联合国开发计划署与中国长期以来的伙伴关系，并通过深化合作，加速推进可持续发展目标与全球气候议程的落实。",
+    excerptZh: "文章转自 联合国开发计划署：https://mp.weixin.qq.com/s/rphT8J8NLzA6lCzEoXlMMA",
     excerptEn: "",
     coverImage: "/avatars/新闻动态/61联合国副秘书长、联合国开发计划署代理署长徐浩良与我院院长邵怡蕾、及多家知名高校、科研机构及企业代表共同探讨未来合作发展的新建议。_with_images/images/cover.jpeg",
   },
