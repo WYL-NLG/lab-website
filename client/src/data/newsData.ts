@@ -15,6 +15,16 @@ export interface NewsDetailItem extends NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "53",
+    folder: "63活动预告：邵怡蕾教授将出席 “π式创新，从案例到洞见” 交叉学科对话论坛_with_images",
+    date: "2025-12-19",
+    titleZh: "活动预告：邵怡蕾教授将出席 \"π式创新，从案例到洞见\" 交叉学科对话论坛",
+    titleEn: "",
+    excerptZh: "π是无限不循环无理数，象征跨学科研究的无限可能。本周六，\"π式创新，从案例到洞见\"交叉学科对话论坛将在华东师范大学举办。",
+    excerptEn: "",
+    coverImage: "/avatars/新闻动态/63活动预告：邵怡蕾教授将出席 “π式创新，从案例到洞见” 交叉学科对话论坛_with_images/images/cover.jpeg",
+  },
+  {
     id: "50",
     folder: "61联合国副秘书长、联合国开发计划署代理署长徐浩良与我院院长邵怡蕾、及多家知名高校、科研机构及企业代表共同探讨未来合作发展的新建议。_with_images",
     date: "2025-11-19",
