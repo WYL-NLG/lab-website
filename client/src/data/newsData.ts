@@ -15,6 +15,16 @@ export interface NewsDetailItem extends NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "55",
+    folder: "62上海升至全球金融科技中心第二，金融科技产业规模超4400亿元_with_images",
+    date: "2025-11-29",
+    titleZh: "上海升至全球金融科技中心第二，金融科技产业规模超4400亿元",
+    titleEn: "",
+    excerptZh: "上海首次在全球金融科技中心综合排名中升至第二。在11月29日举行的第七届上海金融科技国际论坛上，由上海金融科技产业联盟牵头、华东师范大学提供学术支持的《全球金融科技中心发展指数（2025）》正式发布。",
+    excerptEn: "",
+    coverImage: "/avatars/新闻动态/62上海升至全球金融科技中心第二，金融科技产业规模超4400亿元_with_images/images/cover.jpeg",
+  },
+  {
     id: "53",
     folder: "63活动预告：邵怡蕾教授将出席 “π式创新，从案例到洞见” 交叉学科对话论坛_with_images",
     date: "2025-12-19",

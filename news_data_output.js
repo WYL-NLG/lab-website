@@ -95,8 +95,8 @@ export const news = [
     "date": "2024-01-01",
     "titleZh": "上海升至全球金融科技中心第二，金融科技产业规模超4400亿元",
     "titleEn": "上海升至全球金融科技中心第二，金融科技产业规模超4400亿元",
-    "excerptZh": "<div class=\"news-image-wrapper\"> <img src=\"/avatars/新闻动态/上海升至全球金融科技中心第二，金融科技产业规模超4400亿元/images/image1.other\" alt=\"文章图片\" class=\"news-image\" loading=\"lazy\" /> </div>",
-    "excerptEn": "<div class=\"news-image-wrapper\"> <img src=\"/avatars/新闻动态/上海升至全球金融科技中心第二，金融科技产业规模超4400亿元/images/image1.other\" alt=\"文章图片\" class=\"news-image\" loading=\"lazy\" /> </div>",
+    "excerptZh": "上海首次在全球金融科技中心综合排名中升至第二。",
+    "excerptEn": "上海首次在全球金融科技中心综合排名中升至第二。",
     "coverImage": "/avatars/新闻动态/上海升至全球金融科技中心第二，金融科技产业规模超4400亿元/images/cover.jpeg"
   },
   {
