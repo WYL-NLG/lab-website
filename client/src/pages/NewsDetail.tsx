@@ -14,6 +14,13 @@ const newsData: Record<string, {
   images?: string[];
   showHeader?: boolean;
 }> = {
+  "83": {
+    date: "2025-10-09",
+    title: "华东师大智金院院长邵怡蕾教授将出席UNU Macau AI Conference 2025，并主持专题研讨会",
+    content: `<div style='margin: 16px 0;'><div style='display: flex; justify-content: center;'><img src='/avatars/新闻动态/56华东师大智金院院长邵怡蕾教授将出席UNU Macau AI Conference 2025，并主持专题研讨会_with_images/images/cover.jpeg' alt='' style='max-width: 60%; height: auto;'/></div></div><p style='text-indent: 2em;'>📣 为庆祝<strong><span style='color: #0066cc;'>联合国成立80周年</span></strong>及<strong><span style='color: #0066cc;'>联合国大学成立50周年</span></strong>，<strong>UNU Macau AI Conference 2025</strong>将于10月23日至25日在中国澳门特别行政区举办。</p><p style='text-indent: 2em;'>🎤 我院院长<strong><span style='color: #0066cc;'>邵怡蕾教授</span></strong>将于10月24日下午5点在<strong>银河国际会议中心4号会议室</strong>出席并主持专题研讨会——<strong><span style='color: #0066cc;'>“AI and Financial Systems: Enabling Sustainable Development in the Silicon Economy”</span></strong>。她将在会上介绍<strong><span style='color: #0066cc;'>“硅基经济学”</span></strong>这一全新框架，从全球视角探讨如何描述、衡量并治理人工智能驱动的经济体系。</p><br/><div style='text-align: right; font-size: 12px; color: #999;'>智金院SAIFS</div>`,
+    images: [],
+    showHeader: true
+  },
   "80": {
     date: "2025-10-24",
     title: "外交部“第三期人工智能能力建设研讨班”学员访问上海人工智能金融产业研究院",

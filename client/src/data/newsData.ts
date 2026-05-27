@@ -15,6 +15,16 @@ export interface NewsDetailItem extends NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "83",
+    folder: "56华东师大智金院院长邵怡蕾教授将出席UNU Macau AI Conference 2025，并主持专题研讨会_with_images",
+    date: "2025-10-09",
+    titleZh: "华东师大智金院院长邵怡蕾教授将出席UNU Macau AI Conference 2025，并主持专题研讨会",
+    titleEn: "Professor Yilei Shao to Attend UNU Macau AI Conference 2025 and Chair Special Session",
+    excerptZh: "为庆祝联合国成立80周年及联合国大学成立50周年，UNU Macau AI Conference 2025将于10月23日至25日在中国澳门特别行政区举办。我院院长邵怡蕾教授将于10月24日下午5点出席并主持专题研讨会。",
+    excerptEn: "To celebrate the 80th anniversary of the United Nations and the 50th anniversary of the United Nations University, UNU Macau AI Conference 2025 will be held from October 23-25 in Macau, China. Professor Yilei Shao, Dean of our school, will attend and chair a special session at 5 PM on October 24.",
+    coverImage: "/avatars/新闻动态/56华东师大智金院院长邵怡蕾教授将出席UNU Macau AI Conference 2025，并主持专题研讨会_with_images/images/cover.jpeg",
+  },
+  {
     id: "82",
     folder: "57华东师大智金院院长邵怡蕾教授2026年博士生招生启事_with_images",
     date: "2025-10-20",
