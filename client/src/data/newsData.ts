@@ -15,9 +15,19 @@ export interface NewsDetailItem extends NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "81",
+    folder: "58UNU Macau AI Conference 2025 会议预告｜人工智能与金融系统：赋能硅基经济的可持续发展_with_images",
+    date: "2025-10-23",
+    titleZh: "UNU Macau AI Conference 2025 会议预告｜人工智能与金融系统：赋能硅基经济的可持续发展",
+    titleEn: "UNU Macau AI Conference 2025: AI and Financial Systems: Enabling Sustainable Development in the Silicon Economy",
+    excerptZh: "应联合国大学澳门人工智能会议2025邀请，华东师范大学上海人工智能金融学院院长邵怡蕾教授将于2025年10月24日主持一场专题讨论，题为“人工智能与金融系统：赋能硅基经济的可持续发展”。",
+    excerptEn: "At the invitation of the United Nations University Macau AI Conference 2025, Professor Yilei Shao, Dean of Shanghai AI-Finance School at East China Normal University, will chair a special session on October 24, 2025, titled 'AI and Financial Systems: Enabling Sustainable Development in the Silicon Economy.'",
+    coverImage: "/avatars/新闻动态/58UNU Macau AI Conference 2025 会议预告｜人工智能与金融系统：赋能硅基经济的可持续发展_with_images/images/cover.jpeg",
+  },
+  {
     id: "80",
     folder: "59外交部“第三期人工智能能力建设研讨班”学员访问上海人工智能金融产业研究院_with_images",
-    date: "2025-10-21",
+    date: "2025-10-24",
     titleZh: "外交部“第三期人工智能能力建设研讨班”学员访问上海人工智能金融产业研究院",
     titleEn: "",
     excerptZh: "2025年10月21日下午，由中国外交部主办、上海市人民政府协办、华东师范大学承办的“第三期人工智能能力建设研讨班”组织学员参访，来自21个国家的38名学员莅临位于徐汇区的“模速空间”，并参观了上海人工智能金融产业研究院。",
