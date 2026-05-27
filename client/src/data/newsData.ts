@@ -15,6 +15,16 @@ export interface NewsDetailItem extends NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "82",
+    folder: "57华东师大智金院院长邵怡蕾教授2026年博士生招生启事_with_images",
+    date: "2025-12-20",
+    titleZh: "华东师大智金院院长邵怡蕾教授2026年博士生招生启事",
+    titleEn: "Ph.D. Student Recruitment Notice 2026 - Professor Yilei Shao, Dean of SAIFS",
+    excerptZh: "华东师范大学上海人工智能金融学院院长邵怡蕾教授2026年招收博士研究生，欢迎对人工智能与金融交叉领域有研究兴趣的优秀学子报考。",
+    excerptEn: "Professor Yilei Shao, Dean of Shanghai AI-Finance School at East China Normal University, is recruiting Ph.D. students for 2026. Excellent candidates interested in AI-finance interdisciplinary research are welcome to apply.",
+    coverImage: "/avatars/新闻动态/57华东师大智金院院长邵怡蕾教授2026年博士生招生启事_with_images/images/cover.jpeg",
+  },
+  {
     id: "81",
     folder: "58UNU Macau AI Conference 2025 会议预告｜人工智能与金融系统：赋能硅基经济的可持续发展_with_images",
     date: "2025-10-23",
