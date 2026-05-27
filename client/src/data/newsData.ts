@@ -15,6 +15,16 @@ export interface NewsDetailItem extends NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "84",
+    folder: "55华东师大智金院本科生打造AI Agent领域论文平台，Awesome AI Agents Live看遍智能体最新论文_with_images",
+    date: "2025-09-29",
+    titleZh: "华东师大智金院本科生打造AI Agent领域论文平台，Awesome AI Agents Live看遍智能体最新论文",
+    titleEn: "ECNU SAIFS Undergraduate Develops AI Agent Paper Platform - Awesome AI Agents Live",
+    excerptZh: "近日，华东师大上海人工智能金融学院师生共同开发了一款名为「Awesome AI Agents Live」的AI Agent论文实时目录。该网站汇集了近期的研究成果，并通过搜索、筛选、分类导航和快速详情视图等功能，提供简洁的阅读体验。",
+    excerptEn: "Recently, teachers and students from Shanghai AI-Finance School at East China Normal University jointly developed an AI Agent paper real-time directory called 'Awesome AI Agents Live'. The website collects recent research results and provides a concise reading experience through search, filtering, category navigation and quick detail view functions.",
+    coverImage: "/avatars/新闻动态/55华东师大智金院本科生打造AI Agent领域论文平台，Awesome AI Agents Live看遍智能体最新论文_with_images/images/cover.jpeg",
+  },
+  {
     id: "83",
     folder: "56华东师大智金院院长邵怡蕾教授将出席UNU Macau AI Conference 2025，并主持专题研讨会_with_images",
     date: "2025-10-09",
