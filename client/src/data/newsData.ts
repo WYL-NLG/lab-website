@@ -17,7 +17,7 @@ export const newsList: NewsItem[] = [
   {
     id: "82",
     folder: "57华东师大智金院院长邵怡蕾教授2026年博士生招生启事_with_images",
-    date: "2025-12-20",
+    date: "2025-10-20",
     titleZh: "华东师大智金院院长邵怡蕾教授2026年博士生招生启事",
     titleEn: "Ph.D. Student Recruitment Notice 2026 - Professor Yilei Shao, Dean of SAIFS",
     excerptZh: "华东师范大学上海人工智能金融学院院长邵怡蕾教授2026年招收博士研究生，欢迎对人工智能与金融交叉领域有研究兴趣的优秀学子报考。",
