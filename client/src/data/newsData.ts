@@ -15,6 +15,26 @@ export interface NewsDetailItem extends NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "86",
+    folder: "53海外优青（新增批次）申报启动！诚邀全球青年才俊依托华东师范大学上海人工智能金融学院申报_with_images",
+    date: "2025-08-04",
+    titleZh: "海外优青（新增批次）申报启动！诚邀全球青年才俊依托华东师范大学上海人工智能金融学院申报",
+    titleEn: "",
+    excerptZh: "华东师范大学上海人工智能金融学院诚邀全球青年才俊依托学院申报海外优青项目。学院目前已成立人工智能金融研究中心和人工智能伦理与治理研究中心，在AI-Fin领域开展前沿研究，并提供真实金融场景、千卡级算力等关键资源支持。",
+    excerptEn: "",
+    coverImage: "/avatars/新闻动态/53海外优青（新增批次）申报启动！诚邀全球青年才俊依托华东师范大学上海人工智能金融学院申报_with_images/images/cover.jpeg",
+  },
+  {
+    id: "85",
+    folder: "54达卡大学司库穆罕默德·贾汉吉尔·阿拉姆·乔杜里一行来访华东师大上海人工智能金融学院_with_images",
+    date: "2025-09-28",
+    titleZh: "达卡大学司库穆罕默德·贾汉吉尔·阿拉姆·乔杜里一行来访华东师大上海人工智能金融学院",
+    titleEn: "",
+    excerptZh: "9月24日，华东师大上海人工智能金融学院院长邵怡蕾会见了达卡大学司库、金融系教授穆罕默德·贾汉吉尔·阿拉姆·乔杜里一行。双方就学术交流与合作事宜进行了深入探讨。",
+    excerptEn: "",
+    coverImage: "/avatars/新闻动态/54达卡大学司库穆罕默德·贾汉吉尔·阿拉姆·乔杜里一行来访华东师大上海人工智能金融学院_with_images/images/cover.jpeg",
+  },
+  {
     id: "84",
     folder: "55华东师大智金院本科生打造AI Agent领域论文平台，Awesome AI Agents Live看遍智能体最新论文_with_images",
     date: "2025-09-29",

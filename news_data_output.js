@@ -1,5 +1,15 @@
 export const news = [
   {
+    "id": "86",
+    "folder": "53海外优青（新增批次）申报启动！诚邀全球青年才俊依托华东师范大学上海人工智能金融学院申报_with_images",
+    "date": "2025-08-04",
+    "titleZh": "海外优青（新增批次）申报启动！诚邀全球青年才俊依托华东师范大学上海人工智能金融学院申报",
+    "titleEn": "海外优青（新增批次）申报启动！诚邀全球青年才俊依托华东师范大学上海人工智能金融学院申报",
+    "excerptZh": "<div class=\"news-image-wrapper\"> <img src=\"/avatars/新闻动态/53海外优青（新增批次）申报启动！诚邀全球青年才俊依托华东师范大学上海人工智能金融学院申报_with_images/images/image2.png\" alt=\"文章图片\" class=\"news-image\" loading=\"lazy\" /> </div>",
+    "excerptEn": "<div class=\"news-image-wrapper\"> <img src=\"/avatars/新闻动态/53海外优青（新增批次）申报启动！诚邀全球青年才俊依托华东师范大学上海人工智能金融学院申报_with_images/images/image2.png\" alt=\"文章图片\" class=\"news-image\" loading=\"lazy\" /> </div>",
+    "coverImage": "/avatars/新闻动态/53海外优青（新增批次）申报启动！诚邀全球青年才俊依托华东师范大学上海人工智能金融学院申报_with_images/images/cover.jpeg"
+  },
+  {
     "id": "1",
     "folder": "2024，AI在SAIFS！",
     "date": "2024-01-01",
@@ -705,8 +715,8 @@ export const news = [
     "date": "2024-01-01",
     "titleZh": "达卡大学司库穆罕默德·贾汉吉尔·阿拉姆·乔杜里一行来访华东师大上海人工智能金融学院",
     "titleEn": "达卡大学司库穆罕默德·贾汉吉尔·阿拉姆·乔杜里一行来访华东师大上海人工智能金融学院",
-    "excerptZh": "<div class=\"news-image-wrapper\"> <img src=\"/avatars/新闻动态/达卡大学司库穆罕默德·贾汉吉尔·阿拉姆·乔杜里一行来访华东师大上海人工智能金融学院/images/image1.png\" alt=\"文章图片\" class=\"news-image\" loading=\"lazy\" /> </div>",
-    "excerptEn": "<div class=\"news-image-wrapper\"> <img src=\"/avatars/新闻动态/达卡大学司库穆罕默德·贾汉吉尔·阿拉姆·乔杜里一行来访华东师大上海人工智能金融学院/images/image1.png\" alt=\"文章图片\" class=\"news-image\" loading=\"lazy\" /> </div>",
+    "excerptZh": "<div class=\"news-image-wrapper\"> <img src=\"/avatars/新闻动态/达卡大学司库穆罕默德·贾汉吉尔·阿拉姆·乔杜里一行来访华东师大上海人工智能金融学院/images/image2.jpeg\" alt=\"文章图片\" class=\"news-image\" loading=\"lazy\" /> </div>",
+    "excerptEn": "<div class=\"news-image-wrapper\"> <img src=\"/avatars/新闻动态/达卡大学司库穆罕默德·贾汉吉尔·阿拉姆·乔杜里一行来访华东师大上海人工智能金融学院/images/image2.jpeg\" alt=\"文章图片\" class=\"news-image\" loading=\"lazy\" /> </div>",
     "coverImage": "/avatars/新闻动态/达卡大学司库穆罕默德·贾汉吉尔·阿拉姆·乔杜里一行来访华东师大上海人工智能金融学院/images/cover.jpeg"
   },
   {
