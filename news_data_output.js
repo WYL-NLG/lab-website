@@ -1,5 +1,15 @@
 export const news = [
   {
+    "id": "87",
+    "folder": "52当智能成为主要生产资料，硅基经济学引爆「AI+金融」_with_images",
+    "date": "2025-07-31",
+    "titleZh": "当智能成为主要生产资料，硅基经济学引爆「AI+金融」",
+    "titleEn": "当智能成为主要生产资料，硅基经济学引爆「AI+金融」",
+    "excerptZh": "<div class=\"news-image-wrapper\"> <img src=\"/avatars/新闻动态/52当智能成为主要生产资料，硅基经济学引爆「AI+金融」_with_images/images/image1.png\" alt=\"文章图片\" class=\"news-image\" loading=\"lazy\" /> </div>",
+    "excerptEn": "<div class=\"news-image-wrapper\"> <img src=\"/avatars/新闻动态/52当智能成为主要生产资料，硅基经济学引爆「AI+金融」_with_images/images/image1.png\" alt=\"文章图片\" class=\"news-image\" loading=\"lazy\" /> </div>",
+    "coverImage": "/avatars/新闻动态/52当智能成为主要生产资料，硅基经济学引爆「AI+金融」_with_images/images/cover.jpeg"
+  },
+  {
     "id": "86",
     "folder": "53海外优青（新增批次）申报启动！诚邀全球青年才俊依托华东师范大学上海人工智能金融学院申报_with_images",
     "date": "2025-08-04",

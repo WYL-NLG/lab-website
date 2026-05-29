@@ -15,6 +15,16 @@ export interface NewsDetailItem extends NewsItem {
 
 export const newsList: NewsItem[] = [
   {
+    id: "87",
+    folder: "52当智能成为主要生产资料，硅基经济学引爆「AI+金融」_with_images",
+    date: "2025-07-31",
+    titleZh: "当智能成为主要生产资料，硅基经济学引爆「AI+金融」",
+    titleEn: "",
+    excerptZh: "华东师范大学上海人工智能金融学院院长邵怡蕾提出「硅基经济学」，这是一种以人工智能、大模型、算力、数据和芯片为主要生产资料与经济驱动核心的经济学范式。在2025 WAIC人工智能金融领导者论坛上，邵怡蕾院长进一步阐释了这一新范式的核心概念。",
+    excerptEn: "",
+    coverImage: "/avatars/新闻动态/52当智能成为主要生产资料，硅基经济学引爆「AI+金融」_with_images/images/cover.jpeg",
+  },
+  {
     id: "86",
     folder: "53海外优青（新增批次）申报启动！诚邀全球青年才俊依托华东师范大学上海人工智能金融学院申报_with_images",
     date: "2025-08-04",
