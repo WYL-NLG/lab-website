@@ -1,5 +1,35 @@
 export const news = [
   {
+    "id": "90",
+    "folder": "49-2025WAIC“FinAI展：硅基时代的智慧银行”最美展区揭秘，镇馆之宝出没！_with_images",
+    "date": "2025-07-23",
+    "titleZh": "2025WAIC“FinAI展：硅基时代的智慧银行”最美展区揭秘，镇馆之宝出没！",
+    "titleEn": "2025WAIC“FinAI展：硅基时代的智慧银行”最美展区揭秘，镇馆之宝出没！",
+    "excerptZh": "<div class=\"news-image-wrapper\"> <img src=\"/avatars/新闻动态/49-2025WAIC“FinAI展：硅基时代的智慧银行”最美展区揭秘，镇馆之宝出没！_with_images/images/cover.jpeg\" alt=\"文章图片\" class=\"news-image\" loading=\"lazy\" /> </div>",
+    "excerptEn": "<div class=\"news-image-wrapper\"> <img src=\"/avatars/新闻动态/49-2025WAIC“FinAI展：硅基时代的智慧银行”最美展区揭秘，镇馆之宝出没！_with_images/images/cover.jpeg\" alt=\"文章图片\" class=\"news-image\" loading=\"lazy\" /> </div>",
+    "coverImage": "/avatars/新闻动态/49-2025WAIC“FinAI展：硅基时代的智慧银行”最美展区揭秘，镇馆之宝出没！_with_images/images/cover.jpeg"
+  },
+  {
+    "id": "89",
+    "folder": "50本周日，7月27日！13位金融机构领导者、顶尖经济学家、国际AI学界与产业界专家将齐聚FinAI论坛！_with_images",
+    "date": "2025-07-25",
+    "titleZh": "本周日，7月27日！13位金融机构领导者、顶尖经济学家、国际AI学界与产业界专家将齐聚FinAI论坛！",
+    "titleEn": "本周日，7月27日！13位金融机构领导者、顶尖经济学家、国际AI学界与产业界专家将齐聚FinAI论坛！",
+    "excerptZh": "<div class=\"news-image-wrapper\"> <img src=\"/avatars/新闻动态/50本周日，7月27日！13位金融机构领导者、顶尖经济学家、国际AI学界与产业界专家将齐聚FinAI论坛！_with_images/images/cover.jpeg\" alt=\"文章图片\" class=\"news-image\" loading=\"lazy\" /> </div>",
+    "excerptEn": "<div class=\"news-image-wrapper\"> <img src=\"/avatars/新闻动态/50本周日，7月27日！13位金融机构领导者、顶尖经济学家、国际AI学界与产业界专家将齐聚FinAI论坛！_with_images/images/cover.jpeg\" alt=\"文章图片\" class=\"news-image\" loading=\"lazy\" /> </div>",
+    "coverImage": "/avatars/新闻动态/50本周日，7月27日！13位金融机构领导者、顶尖经济学家、国际AI学界与产业界专家将齐聚FinAI论坛！_with_images/images/cover.jpeg"
+  },
+  {
+    "id": "88",
+    "folder": "51WAIC华东师大聚力！首发金融智能未来引擎，三大应用场景落地_with_images",
+    "date": "2025-07-30",
+    "titleZh": "WAIC华东师大聚力！首发金融智能未来引擎，三大应用场景落地",
+    "titleEn": "WAIC华东师大聚力！首发金融智能未来引擎，三大应用场景落地",
+    "excerptZh": "<div class=\"news-image-wrapper\"> <img src=\"/avatars/新闻动态/51WAIC华东师大聚力！首发金融智能未来引擎，三大应用场景落地_with_images/images/cover.jpeg\" alt=\"文章图片\" class=\"news-image\" loading=\"lazy\" /> </div>",
+    "excerptEn": "<div class=\"news-image-wrapper\"> <img src=\"/avatars/新闻动态/51WAIC华东师大聚力！首发金融智能未来引擎，三大应用场景落地_with_images/images/cover.jpeg\" alt=\"文章图片\" class=\"news-image\" loading=\"lazy\" /> </div>",
+    "coverImage": "/avatars/新闻动态/51WAIC华东师大聚力！首发金融智能未来引擎，三大应用场景落地_with_images/images/cover.jpeg"
+  },
+  {
     "id": "87",
     "folder": "52当智能成为主要生产资料，硅基经济学引爆「AI+金融」_with_images",
     "date": "2025-07-31",
