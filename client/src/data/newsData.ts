@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
   id: string;
   folder: string;
   date: string;
@@ -14,6 +14,16 @@ export interface NewsDetailItem extends NewsItem {
 }
 
 export const newsList: NewsItem[] = [
+  {
+    id: "115",
+    folder: '24智金院院长邵怡蕾教授2025年博士生招生启事_with_images',
+    date: "2024-11-29",
+    titleZh: '智金院院长邵怡蕾教授2025年博士生招生启事',
+    titleEn: "",
+    excerptZh: '华东师范大学上海人工智能金融学院院长邵怡蕾教授2025年博士生招生启事。招生学科为金融学（学术学位），研究方向为人工智能金融方向及"从知产到资产"教育科技人才一体化研究。',
+    excerptEn: "",
+    coverImage: '/avatars/新闻动态/24智金院院长邵怡蕾教授2025年博士生招生启事_with_images/images/cover.jpeg',
+  },
   {
     id: "114",
     folder: '26华东师大上海人工智能金融孵化器荣获徐汇区第二批区级高质量孵化器称号_with_images',
