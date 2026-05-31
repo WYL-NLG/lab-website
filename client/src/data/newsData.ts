@@ -1,4 +1,4 @@
-﻿﻿﻿﻿export interface NewsItem {
+﻿﻿﻿﻿﻿﻿export interface NewsItem {
   id: string;
   folder: string;
   date: string;
@@ -14,6 +14,16 @@ export interface NewsDetailItem extends NewsItem {
 }
 
 export const newsList: NewsItem[] = [
+  {
+    id: "104",
+    folder: '38这个夏天，来“模速空间”，一起搞“年轻人的事业”！｜“手搓”AI智能体“模速”夏季学校_with_images',
+    date: "2025-04-30",
+    titleZh: '这个夏天，来"模速空间"，一起搞"年轻人的事业"！｜"手搓"AI智能体"模速"夏季学校',
+    titleEn: "",
+    excerptZh: '不是刷题补课，也不是走马观花的游学打卡，而是一次真正进入未来AI科创核心、真实参与项目设计与落地、与顶尖导师共创的沉浸式挑战！2025年7月，华东师范大学上海人工智能金融学院将正式启动"突触计划"，一个与AI共构意义的"模速"夏季学校，面向全国的高中生和本科生开放。',
+    excerptEn: "",
+    coverImage: '/avatars/新闻动态/38这个夏天，来“模速空间”，一起搞“年轻人的事业”！｜“手搓”AI智能体“模速”夏季学校_with_images/images/cover.jpeg',
+  },
   {
     id: "103",
     folder: '39智金活动｜六大孵化器集结“模速空间”，你来不来！_with_images',
