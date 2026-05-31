@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
   id: string;
   folder: string;
   date: string;
@@ -14,6 +14,16 @@ export interface NewsDetailItem extends NewsItem {
 }
 
 export const newsList: NewsItem[] = [
+  {
+    id: "111",
+    folder: '31校长钱旭红会见联合国大学校长兼联合国副秘书长奇利齐·马瓦拉一行_with_images',
+    date: "2025-03-03",
+    titleZh: '校长钱旭红会见联合国大学校长兼联合国副秘书长奇利齐·马瓦拉一行',
+    titleEn: "",
+    excerptZh: '2月27日，校长钱旭红在普陀校区会见了来访的联合国大学校长兼联合国副秘书长Tshilidzi Marwala一行。双方围绕筹建"联合国大学-华东师范大学人工智能金融联合研究中心"、人工智能技术在全球金融变革中的应用与合作方向等展开了交流。',
+    excerptEn: "",
+    coverImage: '/avatars/新闻动态/31校长钱旭红会见联合国大学校长兼联合国副秘书长奇利齐·马瓦拉一行_with_images/images/cover.jpeg',
+  },
   {
     id: "110",
     folder: '32联合国大学校长兼联合国副秘书长奇利齐·马瓦拉作客智金杰出论坛_with_images',
