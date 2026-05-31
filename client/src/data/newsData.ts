@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
   id: string;
   folder: string;
   date: string;
@@ -14,6 +14,16 @@ export interface NewsDetailItem extends NewsItem {
 }
 
 export const newsList: NewsItem[] = [
+  {
+    id: "112",
+    folder: '30智金杰出讲坛·活动预告｜联合国副秘书长、联合国大学校长Tshilidzi Marwala教授在SAIFS开讲_with_images',
+    date: "2025-02-25",
+    titleZh: '智金杰出讲坛·活动预告｜联合国副秘书长、联合国大学校长Tshilidzi Marwala教授在SAIFS开讲',
+    titleEn: "",
+    excerptZh: '本周四，2月27日，上午11：30，"智金杰出讲坛"特邀联合国副秘书长、联合国大学校长Tshilidzi Marwala教授亲临SAIFS，带来题为"人工智能、可持续发展与未来"的讲座。',
+    excerptEn: "",
+    coverImage: '/avatars/新闻动态/30智金杰出讲坛·活动预告｜联合国副秘书长、联合国大学校长Tshilidzi Marwala教授在SAIFS开讲_with_images/images/cover.jpeg',
+  },
   {
     id: "111",
     folder: '31校长钱旭红会见联合国大学校长兼联合国副秘书长奇利齐·马瓦拉一行_with_images',
