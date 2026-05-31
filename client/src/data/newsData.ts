@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
   id: string;
   folder: string;
   date: string;
@@ -14,6 +14,16 @@ export interface NewsDetailItem extends NewsItem {
 }
 
 export const newsList: NewsItem[] = [
+  {
+    id: "109",
+    folder: '33智金观点·新质生产力 _ 邵怡蕾院长：人工智能成为新的“锚”，驱动人类社会进入高丰裕时代？_with_images',
+    date: "2025-03-28",
+    titleZh: '智金观点·新质生产力 | 邵怡蕾院长：人工智能成为新的"锚"，驱动人类社会进入高丰裕时代？',
+    titleEn: "",
+    excerptZh: '近日，DeepSeek（深度求索）在开源平台发布升级版V3模型。人工智能（AI）的快速发展，不只是技术革新，更关涉未来秩序。全球范围此起彼伏的讨论，既有惊叹和警觉，也有期待与思索。',
+    excerptEn: "",
+    coverImage: '/avatars/新闻动态/33智金观点·新质生产力 _ 邵怡蕾院长：人工智能成为新的“锚”，驱动人类社会进入高丰裕时代？_with_images/images/cover.jpeg',
+  },
   {
     id: "108",
     folder: '34产学研融合发展，助力“AI+金融”｜智金院赴环上大科技园调研交流_with_images',
