@@ -1,7 +1,7 @@
 /**
  * News Page — 最新动态 / News
  */
-import { useState, useMemo, useEffect, useCallback } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { useLocation } from "wouter";
 import { Calendar, ArrowRight, Search, X, ChevronLeft, ChevronRight } from "lucide-react";
@@ -16,6 +16,7 @@ interface NewsPageState {
   keyword: string;
   yearFilter: string;
   currentPage: number;
+  scrollY: number;
 }
 
 export default function News() {
@@ -25,48 +26,8 @@ export default function News() {
   const [yearFilter, setYearFilter] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [customPage, setCustomPage] = useState("");
-
-  useEffect(() => {
-    const savedState = sessionStorage.getItem(STORAGE_KEY);
-    if (savedState) {
-      try {
-        const parsedState: NewsPageState = JSON.parse(savedState);
-        setKeyword(parsedState.keyword);
-        setYearFilter(parsedState.yearFilter);
-        setCurrentPage(parsedState.currentPage);
-        
-        const interval = setInterval(() => {
-          const newsElement = document.getElementById(`news-${parsedState.newsId}`);
-          if (newsElement) {
-            newsElement.scrollIntoView({
-              behavior: "smooth",
-              block: "center",
-            });
-            clearInterval(interval);
-            sessionStorage.removeItem(STORAGE_KEY);
-          }
-        }, 50);
-        
-        setTimeout(() => {
-          clearInterval(interval);
-          sessionStorage.removeItem(STORAGE_KEY);
-        }, 3000);
-      } catch (e) {
-        sessionStorage.removeItem(STORAGE_KEY);
-      }
-    }
-  }, []);
-
-  const handleNewsClick = (newsId: string) => {
-    const state: NewsPageState = {
-      newsId,
-      keyword,
-      yearFilter,
-      currentPage,
-    };
-    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-    setLocation(`/news/${newsId}`);
-  };
+  const [pendingRestore, setPendingRestore] = useState<NewsPageState | null>(null);
+  const hasRestoredRef = useRef(false);
 
   const filteredNews = useMemo(() => {
     const sortedNews = [...newsList].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
@@ -88,15 +49,106 @@ export default function News() {
     return filteredNews.slice(start, start + PAGE_SIZE);
   }, [filteredNews, currentPage]);
 
+  useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+    return () => {
+      if ("scrollRestoration" in window.history) {
+        window.history.scrollRestoration = "auto";
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    let restoreState: NewsPageState | null = null;
+
+    const historyState = window.history.state?.newsPageState;
+    if (historyState) {
+      restoreState = historyState as NewsPageState;
+    } else {
+      const savedState = sessionStorage.getItem(STORAGE_KEY);
+      if (savedState) {
+        try {
+          restoreState = JSON.parse(savedState) as NewsPageState;
+        } catch {
+          sessionStorage.removeItem(STORAGE_KEY);
+        }
+      }
+    }
+
+    if (restoreState) {
+      setKeyword(restoreState.keyword || "");
+      setYearFilter(restoreState.yearFilter || "");
+      setCurrentPage(restoreState.currentPage || 1);
+      setPendingRestore(restoreState);
+      hasRestoredRef.current = true;
+      if (historyState) {
+        window.history.replaceState({ ...window.history.state, newsPageState: null }, "");
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!pendingRestore) return;
+    const state = pendingRestore;
+    setPendingRestore(null);
+
+    const el = document.getElementById(`news-${state.newsId}`);
+    if (el) {
+      requestAnimationFrame(() => {
+        el.scrollIntoView({ behavior: "smooth", block: "center" });
+        sessionStorage.removeItem(STORAGE_KEY);
+      });
+    } else {
+      setTimeout(() => {
+        const retryEl = document.getElementById(`news-${state.newsId}`);
+        if (retryEl) {
+          retryEl.scrollIntoView({ behavior: "smooth", block: "center" });
+        } else {
+          window.scrollTo({ top: state.scrollY, behavior: "smooth" });
+        }
+        sessionStorage.removeItem(STORAGE_KEY);
+      }, 200);
+    }
+  }, [pendingRestore, paginatedNews]);
+
+  useEffect(() => {
+    if (!hasRestoredRef.current) {
+      const timer = setTimeout(() => window.scrollTo(0, 0), 0);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  const handleNewsClick = (newsId: string) => {
+    const state: NewsPageState = {
+      newsId,
+      keyword,
+      yearFilter,
+      currentPage,
+      scrollY: window.scrollY,
+    };
+    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    try {
+      window.history.replaceState(
+        { ...window.history.state, newsPageState: state },
+        ""
+      );
+    } catch {}
+    setLocation(`/news/${newsId}`);
+  };
+
   const handlePrevPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
+      setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 100);
     }
   };
 
   const handleNextPage = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
+      setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 100);
     }
   };
 
@@ -106,6 +158,7 @@ export default function News() {
     if (!isNaN(pageNum) && pageNum >= 1 && pageNum <= totalPages) {
       setCurrentPage(pageNum);
       setCustomPage("");
+      setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 100);
     }
   };
 
@@ -113,20 +166,8 @@ export default function News() {
     setKeyword("");
     setYearFilter("");
     setCurrentPage(1);
+    setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 100);
   };
-
-  useEffect(() => {
-    const savedState = sessionStorage.getItem(STORAGE_KEY);
-    if (!savedState) {
-      const timer = setTimeout(() => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      }, 100);
-      return () => clearTimeout(timer);
-    }
-  }, [currentPage]);
 
   const hasActiveFilters = keyword || yearFilter;
 

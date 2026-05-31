@@ -1,4 +1,4 @@
-export interface NewsItem {
+﻿﻿﻿﻿export interface NewsItem {
   id: string;
   folder: string;
   date: string;
@@ -14,6 +14,36 @@ export interface NewsDetailItem extends NewsItem {
 }
 
 export const newsList: NewsItem[] = [
+  {
+    id: "103",
+    folder: '39智金活动｜六大孵化器集结“模速空间”，你来不来！_with_images',
+    date: "2025-05-15",
+    titleZh: '智金活动｜六大孵化器集结“模速空间”，你来不来！',
+    titleEn: "",
+    excerptZh: '谁能抓住下一个AI爆点？谁能连通技术、产业和资本的黄金通道？由华东师范大学上海人工智能金融孵化器主办，模速空间、环上大科技园、智谱Z计划、上海交大工研院、上海人工智能研究院协办的“模速孵化力论坛”，将汇聚AI孵化领域的关键力量。',
+    excerptEn: "",
+    coverImage: "/avatars/新闻动态/39智金活动｜六大孵化器集结“模速空间”，你来不来！_with_images/images/cover.jpeg",
+  },
+  {
+    id: "102",
+    folder: '40AI+金融，未来已来！华东师大上海人工智能金融产业研究院暨孵化器在“模速空间”正式成立揭牌！_with_images',
+    date: "2025-05-26",
+    titleZh: 'AI+金融，未来已来！华东师大上海人工智能金融产业研究院暨孵化器在“模速空间”正式成立揭牌！',
+    titleEn: "",
+    excerptZh: '30天的人类分析师工作，30秒即可由智能体完成。一键生成信贷报告，长达44页、近两万字，所有数据均通过幻觉检测器核验，并带有准确数据引用来源。今天，华东师大上海人工智能金融产业研究院暨孵化器在“模速空间”揭牌！',
+    excerptEn: "",
+    coverImage: "/avatars/新闻动态/40AI+金融，未来已来！华东师大上海人工智能金融产业研究院暨孵化器在“模速空间”正式成立揭牌！_with_images/images/cover.jpeg",
+  },
+  {
+    id: "101",
+    folder: '41导师介绍｜吴宗翰助理教授：国际人工智能领域“万引”青年学者｜智金院“模速”夏季学校首轮报名即将截止！_with_images',
+    date: "2025-05-28",
+    titleZh: '导师介绍｜吴宗翰助理教授：国际人工智能领域“万引”青年学者｜智金院“模速”夏季学校首轮报名即将截止！',
+    titleEn: "",
+    excerptZh: '吴宗翰助理教授的研究兴趣包括图机器学习和大语言模型，他的研究在谷歌学术（Google Scholar）上的引用次数超过17,000次，研究成果在学术界得到了广泛认可和应用。吴宗翰助理教授将在2025智金院“模速”夏季学校中主讲《智能的基石：深度学习的原理与未来》。',
+    excerptEn: "",
+    coverImage: "/avatars/新闻动态/41导师介绍｜吴宗翰助理教授：国际人工智能领域“万引”青年学者｜智金院“模速”夏季学校首轮报名即将截止！_with_images/images/cover.jpeg",
+  },
   {
     id: "100",
     folder: '42智金杰出讲坛·活动预告｜明天，世界知名人工智能治理专家Max Tegmark教授在SAIFS开讲！_with_images',
