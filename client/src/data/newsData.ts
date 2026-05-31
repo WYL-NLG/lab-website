@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
   id: string;
   folder: string;
   date: string;
@@ -14,6 +14,16 @@ export interface NewsDetailItem extends NewsItem {
 }
 
 export const newsList: NewsItem[] = [
+  {
+    id: "108",
+    folder: '34产学研融合发展，助力“AI+金融”｜智金院赴环上大科技园调研交流_with_images',
+    date: "2025-03-31",
+    titleZh: '产学研融合发展，助力“AI+金融”｜智金院赴环上大科技园调研交流',
+    titleEn: "",
+    excerptZh: '3月28日上午，华东师范大学上海人工智能金融学院院长邵怡蕾、院长助理汤傲成一行赴环上大科技园开展调研交流活动。双方围绕人才培养、学院发展以及产学研深度融合等议题进行了深入交流。',
+    excerptEn: "",
+    coverImage: '/avatars/新闻动态/34产学研融合发展，助力“AI+金融”｜智金院赴环上大科技园调研交流_with_images/images/cover.jpeg',
+  },
   {
     id: "107",
     folder: '35探索超限融合机制，赋能人工智能金融未来——智金院第一届理事会第三次全体会议顺利举行_with_images',
