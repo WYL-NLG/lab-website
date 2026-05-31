@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
   id: string;
   folder: string;
   date: string;
@@ -14,6 +14,26 @@ export interface NewsDetailItem extends NewsItem {
 }
 
 export const newsList: NewsItem[] = [
+  {
+    id: "114",
+    folder: '26华东师大上海人工智能金融孵化器荣获徐汇区第二批区级高质量孵化器称号_with_images',
+    date: "2024-12-11",
+    titleZh: '华东师大上海人工智能金融孵化器荣获徐汇区第二批区级高质量孵化器称号',
+    titleEn: "",
+    excerptZh: '12月10日，2024年徐汇区高质量孵化器建设推进大会在城开国际大厦召开。徐汇区委常委、副区长俞林伟对华东师大上海人工智能金融孵化器等8家第二批区级高质量孵化器进行了授牌。',
+    excerptEn: "",
+    coverImage: '/avatars/新闻动态/26华东师大上海人工智能金融孵化器荣获徐汇区第二批区级高质量孵化器称号_with_images/images/cover.jpeg',
+  },
+  {
+    id: "113",
+    folder: '29智金院SAIFS祝您2025元旦快乐！_with_images',
+    date: "2025-01-01",
+    titleZh: '智金院SAIFS祝您2025元旦快乐！',
+    titleEn: "",
+    excerptZh: '告别旧岁，迎接新年！2025年，在AI与量子科学的前沿交汇之处，SAIFS愿与您携手，点燃智能的张力，一同探索AI与量子革命对金融实践和未来发展的全新定义。新的一年，让我们共同迎接挑战，开创更加智能与可持续的未来！',
+    excerptEn: "",
+    coverImage: '/avatars/新闻动态/29智金院SAIFS祝您2025元旦快乐！_with_images/images/cover.jpeg',
+  },
   {
     id: "112",
     folder: '30智金杰出讲坛·活动预告｜联合国副秘书长、联合国大学校长Tshilidzi Marwala教授在SAIFS开讲_with_images',
