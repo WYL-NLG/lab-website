@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
+﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
   id: string;
   folder: string;
   date: string;
@@ -14,6 +14,16 @@ export interface NewsDetailItem extends NewsItem {
 }
 
 export const newsList: NewsItem[] = [
+  {
+    id: "106",
+    folder: '36学术发表·邵怡蕾院长｜硅基经济学：AGI如何成为新的全球权力杠杆_with_images',
+    date: "2025-04-23",
+    titleZh: '学术发表·邵怡蕾院长｜硅基经济学：AGI如何成为新的全球权力杠杆',
+    titleEn: "",
+    excerptZh: '2025年开年，DeepSeek犹如一场突如其来的飓风，横扫全球智能版图。邵怡蕾院长以人工智能研究者和国际金融研究者的跨界身份探究：目前各国间的智能博弈，究竟在争夺什么？本文原载《探索与争鸣》2025年第3期。',
+    excerptEn: "",
+    coverImage: '/avatars/新闻动态/36学术发表·邵怡蕾院长｜硅基经济学：AGI如何成为新的全球权力杠杆_with_images/images/cover.jpeg',
+  },
   {
     id: "105",
     folder: '37活动预告｜本周六！4月26日，与您相约文汇讲堂，共话「数字技术如何在全球南方开源与共享」_with_images',
