@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
   id: string;
   folder: string;
   date: string;
@@ -14,6 +14,16 @@ export interface NewsDetailItem extends NewsItem {
 }
 
 export const newsList: NewsItem[] = [
+  {
+    id: "116",
+    folder: '27智金院｜智金产业研究院：招聘金融数据科学家或人工智能金融研究员，1月20日截止申请！_with_images',
+    date: "2024-12-17",
+    titleZh: '智金院｜智金产业研究院：招聘金融数据科学家或人工智能金融研究员，1月20日截止申请！',
+    titleEn: "",
+    excerptZh: '生成式人工智能的爆发式增长正重新定义行业格局。站在这个全新时代的起点，我们正寻找与你一样充满潜力的人才，以金融数据科学家或人工智能金融研究员的身份，加入全球领先的人工智能金融研究院。',
+    excerptEn: "",
+    coverImage: '/avatars/新闻动态/27智金院｜智金产业研究院：招聘金融数据科学家或人工智能金融研究员，1月20日截止申请！_with_images/images/cover.jpeg',
+  },
   {
     id: "115",
     folder: '24智金院院长邵怡蕾教授2025年博士生招生启事_with_images',
