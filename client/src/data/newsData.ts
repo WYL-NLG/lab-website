@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿export interface NewsItem {
+﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
   id: string;
   folder: string;
   date: string;
@@ -14,6 +14,16 @@ export interface NewsDetailItem extends NewsItem {
 }
 
 export const newsList: NewsItem[] = [
+  {
+    id: "105",
+    folder: '37活动预告｜本周六！4月26日，与您相约文汇讲堂，共话「数字技术如何在全球南方开源与共享」_with_images',
+    date: "2025-04-24",
+    titleZh: '活动预告｜本周六！4月26日，与您相约文汇讲堂，共话「数字技术如何在全球南方开源与共享」',
+    titleEn: "",
+    excerptZh: '4月26日下午，2025年第176期文汇讲堂"文明共生互鉴下的全球南方"系列讲座进入第二期，主题为《数字技术在全球南方的开源与共享》。主讲嘉宾余南平，对话嘉宾邵怡蕾、余祖坤、吴冠军，四位嘉宾不同维度的汇聚将进一步展示全球南方在数字技术领域面临的机遇与挑战。',
+    excerptEn: "",
+    coverImage: '/avatars/新闻动态/37活动预告｜本周六！4月26日，与您相约文汇讲堂，共话「数字技术如何在全球南方开源与共享」_with_images/images/cover.jpeg',
+  },
   {
     id: "104",
     folder: '38这个夏天，来“模速空间”，一起搞“年轻人的事业”！｜“手搓”AI智能体“模速”夏季学校_with_images',
