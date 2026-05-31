@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
   id: string;
   folder: string;
   date: string;
@@ -14,6 +14,16 @@ export interface NewsDetailItem extends NewsItem {
 }
 
 export const newsList: NewsItem[] = [
+  {
+    id: "110",
+    folder: '32联合国大学校长兼联合国副秘书长奇利齐·马瓦拉作客智金杰出论坛_with_images',
+    date: "2025-03-04",
+    titleZh: '联合国大学校长兼联合国副秘书长奇利齐·马瓦拉作客智金杰出论坛',
+    titleEn: "",
+    excerptZh: '2月27日上午，华东师范大学上海人工智能金融学院首届"智金杰出论坛"系列讲座在普陀校区理科大楼A512教室举行。本次讲座邀请联合国大学校长兼联合国副秘书长Tshilidzi Marwala做了题为"人工智能、可持续发展和我们的未来"的演讲。',
+    excerptEn: "",
+    coverImage: '/avatars/新闻动态/32联合国大学校长兼联合国副秘书长奇利齐·马瓦拉作客智金杰出论坛_with_images/images/cover.jpeg',
+  },
   {
     id: "109",
     folder: '33智金观点·新质生产力 _ 邵怡蕾院长：人工智能成为新的“锚”，驱动人类社会进入高丰裕时代？_with_images',
