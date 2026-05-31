@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
+﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
   id: string;
   folder: string;
   date: string;
@@ -14,6 +14,16 @@ export interface NewsDetailItem extends NewsItem {
 }
 
 export const newsList: NewsItem[] = [
+  {
+    id: "107",
+    folder: '35探索超限融合机制，赋能人工智能金融未来——智金院第一届理事会第三次全体会议顺利举行_with_images',
+    date: "2025-04-22",
+    titleZh: '探索超限融合机制，赋能人工智能金融未来——智金院第一届理事会第三次全体会议顺利举行',
+    titleEn: "",
+    excerptZh: '4月11日上午，华东师范大学上海人工智能金融学院第一届理事会第三次全体会议在徐汇区"模速空间"华东师大上海人工智能金融产业研究院大会议室召开。华东师范大学校长、智金院理事会理事长钱旭红，党委副书记、智金院理事会副理事长孟钟捷出席会议并讲话。',
+    excerptEn: "",
+    coverImage: '/avatars/新闻动态/35探索超限融合机制，赋能人工智能金融未来——智金院第一届理事会第三次全体会议顺利举行_with_images/images/cover.jpeg',
+  },
   {
     id: "106",
     folder: '36学术发表·邵怡蕾院长｜硅基经济学：AGI如何成为新的全球权力杠杆_with_images',
