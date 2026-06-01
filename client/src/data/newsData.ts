@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
   id: string;
   folder: string;
   date: string;
@@ -14,6 +14,16 @@ export interface NewsDetailItem extends NewsItem {
 }
 
 export const newsList: NewsItem[] = [
+  {
+    id: "117",
+    folder: '28-2024，AI在SAIFS！_with_images',
+    date: "2024-12-31",
+    titleZh: '2024，AI在SAIFS！',
+    titleEn: "",
+    excerptZh: '2024，SAIFS开启AI与金融深度融合之旅。回望2024，我们砥砺前行，一路奋进。展望2025，未来可期，乘风破浪。',
+    excerptEn: "",
+    coverImage: '/avatars/新闻动态/28-2024，AI在SAIFS！_with_images/images/cover.jpeg',
+  },
   {
     id: "116",
     folder: '27智金院｜智金产业研究院：招聘金融数据科学家或人工智能金融研究员，1月20日截止申请！_with_images',
