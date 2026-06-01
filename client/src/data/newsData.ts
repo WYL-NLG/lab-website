@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
   id: string;
   folder: string;
   date: string;
@@ -14,6 +14,26 @@ export interface NewsDetailItem extends NewsItem {
 }
 
 export const newsList: NewsItem[] = [
+  {
+    id: "120",
+    folder: '81Preview _ Prof. Yilei Shao & Rector Tshilidzi Marwala：Reimaging the Wealth of Nations_ From Invisibl_with_images',
+    date: "2026-05-28",
+    titleZh: 'Preview | Prof. Yilei Shao & Rector Tshilidzi Marwala：Reimaging the Wealth of Nations: From Invisible Hand to Digital Hand',
+    titleEn: "",
+    excerptZh: '2026年6月5日，邵怡蕾教授将受邀参加联合国大学（UNU）主办的高层对话，主题为"重新想象国富：从无形之手到数字之手"。',
+    excerptEn: "",
+    coverImage: '/avatars/新闻动态/81Preview _ Prof. Yilei Shao & Rector Tshilidzi Marwala：Reimaging the Wealth of Nations_ From Invisibl_with_images/images/cover.jpeg',
+  },
+  {
+    id: "119",
+    folder: '80讲座回顾｜智金院院长邵怡蕾教授应邀赴证通公司开展专题讲座_with_images',
+    date: "2026-05-26",
+    titleZh: '讲座回顾｜智金院院长邵怡蕾教授应邀赴证通公司开展专题讲座',
+    titleEn: "",
+    excerptZh: '2026年5月19日，我院院长邵怡蕾教授受邀赴证通公司，开展《以词为锚——人工智能、Token经济与数字人民币的协同出海》的专题讲座。证通公司高管及相关同事出席并参与了此次讲座。',
+    excerptEn: "",
+    coverImage: '/avatars/新闻动态/80讲座回顾｜智金院院长邵怡蕾教授应邀赴证通公司开展专题讲座_with_images/images/cover.jpeg',
+  },
   {
     id: "118",
     folder: '79初赛项目展示｜2026模塑申城杯·“AI原生·代码进化”青少年AI编程大赛_with_images',
