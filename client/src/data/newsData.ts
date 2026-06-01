@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
   id: string;
   folder: string;
   date: string;
@@ -14,6 +14,16 @@ export interface NewsDetailItem extends NewsItem {
 }
 
 export const newsList: NewsItem[] = [
+  {
+    id: "118",
+    folder: '79初赛项目展示｜2026模塑申城杯·“AI原生·代码进化”青少年AI编程大赛_with_images',
+    date: "2026-05-26",
+    titleZh: '初赛项目展示｜2026模塑申城杯·“AI原生·代码进化”青少年AI编程大赛',
+    titleEn: "",
+    excerptZh: '上海2026模塑申城杯·人工智能+教育“AI原生·代码进化”青少年AI编程创新创意大赛正在火热进行中。以下为初赛阶段项目展示。',
+    excerptEn: "",
+    coverImage: '/avatars/新闻动态/79初赛项目展示｜2026模塑申城杯·“AI原生·代码进化”青少年AI编程大赛_with_images/images/cover.jpeg',
+  },
   {
     id: "117",
     folder: '28-2024，AI在SAIFS！_with_images',
