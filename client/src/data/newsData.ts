@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
   id: string;
   folder: string;
   date: string;
@@ -14,6 +14,16 @@ export interface NewsDetailItem extends NewsItem {
 }
 
 export const newsList: NewsItem[] = [
+  {
+    id: "121",
+    folder: '82活动预告｜智金院院长邵怡蕾教授将与联合国副秘书长、联合国大学校长奇利齐·马瓦拉教授进行对话：《新国富论：从无形之手到数字之手》_with_images',
+    date: "2026-05-28",
+    titleZh: '活动预告｜智金院院长邵怡蕾教授将与联合国副秘书长、联合国大学校长奇利齐·马瓦拉教授进行对话：《新国富论：从无形之手到数字之手》',
+    titleEn: "",
+    excerptZh: '我院院长邵怡蕾教授将于2026年6月5日受邀参加联合国大学举办的高层对话活动，主题为《新国富论：从无形之手到数字之手》。',
+    excerptEn: "",
+    coverImage: '/avatars/新闻动态/82活动预告｜智金院院长邵怡蕾教授将与联合国副秘书长、联合国大学校长奇利齐·马瓦拉教授进行对话：《新国富论：从无形之手到数字之手》_with_images/images/cover.jpeg',
+  },
   {
     id: "120",
     folder: '81Preview _ Prof. Yilei Shao & Rector Tshilidzi Marwala：Reimaging the Wealth of Nations_ From Invisibl_with_images',
