@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
   id: string;
   folder: string;
   date: string;
@@ -14,6 +14,16 @@ export interface NewsDetailItem extends NewsItem {
 }
 
 export const newsList: NewsItem[] = [
+  {
+    id: "122",
+    folder: '25人类世界，还有AI闯不进去的领域吗？_with_images',
+    date: "2024-12-08",
+    titleZh: '人类世界，还有AI闯不进去的领域吗？',
+    titleEn: "",
+    excerptZh: '新世相采访了出席"AIGC之夜：人与AI的新生"活动的5位嘉宾——毛尖、邵怡蕾、吴冠军、严锋、王玥婷，从文学、影像、艺术、科幻、政治学等不同专业视角，共同发起一次关于AI与艺术的讨论。',
+    excerptEn: "",
+    coverImage: '/avatars/新闻动态/25人类世界，还有AI闯不进去的领域吗？_with_images/images/cover.jpeg',
+  },
   {
     id: "121",
     folder: '82活动预告｜智金院院长邵怡蕾教授将与联合国副秘书长、联合国大学校长奇利齐·马瓦拉教授进行对话：《新国富论：从无形之手到数字之手》_with_images',
