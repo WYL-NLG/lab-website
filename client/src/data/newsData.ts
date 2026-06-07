@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
   id: string;
   folder: string;
   date: string;
@@ -14,6 +14,16 @@ export interface NewsDetailItem extends NewsItem {
 }
 
 export const newsList: NewsItem[] = [
+  {
+    id: "123",
+    folder: '83活动预告 _ 智金院院长邵怡蕾教授受邀出席第30届亚太知识发现与数据挖掘会议（PAKDD 2026）并发表演讲_with_images',
+    date: "2026-06-06",
+    titleZh: '活动预告 | 智金院院长邵怡蕾教授受邀出席第30届亚太知识发现与数据挖掘会议（PAKDD 2026）并发表演讲',
+    titleEn: "",
+    excerptZh: '我院院长邵怡蕾教授将于2026年6月9日出席第30届亚太知识发现与数据挖掘会议（PAKDD 2026）举办的AI4DF分会，并发表《原生智能体金融：前沿视角探析》主题演讲。',
+    excerptEn: "",
+    coverImage: '/avatars/新闻动态/83活动预告 _ 智金院院长邵怡蕾教授受邀出席第30届亚太知识发现与数据挖掘会议（PAKDD 2026）并发表演讲_with_images/images/cover.jpeg',
+  },
   {
     id: "122",
     folder: '25人类世界，还有AI闯不进去的领域吗？_with_images',
