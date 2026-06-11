@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export interface NewsItem {
   id: string;
   folder: string;
   date: string;
@@ -14,6 +14,26 @@ export interface NewsDetailItem extends NewsItem {
 }
 
 export const newsList: NewsItem[] = [
+  {
+    id: "125",
+    folder: '85活动回顾｜智金院院长邵怡蕾教授与联合国副秘书长、联合国大学校长奇利齐·马瓦拉教授进行对话：《新国富论：从无形之手到数字之手》_with_images',
+    date: "2026-06-10",
+    titleZh: '活动回顾｜智金院院长邵怡蕾教授与联合国副秘书长、联合国大学校长奇利齐·马瓦拉教授进行对话：《新国富论：从无形之手到数字之手》',
+    titleEn: "",
+    excerptZh: '2026年6月5日，我院院长邵怡蕾教授与联合国大学校长奇利齐·马瓦拉教授于东京联合国大学总部进行高层次对话活动，主题为《新国富论：从无形之手到数字之手》。',
+    excerptEn: "",
+    coverImage: '/avatars/新闻动态/85活动回顾｜智金院院长邵怡蕾教授与联合国副秘书长、联合国大学校长奇利齐·马瓦拉教授进行对话：《新国富论：从无形之手到数字之手》_with_images/images/cover.jpeg',
+  },
+  {
+    id: "124",
+    folder: '84Recap｜Prof. Yilei Shao & Rector Tshilidzi Marwala：Reimaging the Wealth of Nations_ From Invisible Ha_with_images',
+    date: "2026-06-10",
+    titleZh: 'Recap | Prof. Yilei Shao & Rector Tshilidzi Marwala：Reimaging the Wealth of Nations: From Invisible Hand to Digital Hand',
+    titleEn: "",
+    excerptZh: '2026年6月5日，我们的院长邵怡蕾教授与联合国大学（UNU）校长奇利齐·马瓦拉教授在东京联合国大学总部举行了一场高层对话。',
+    excerptEn: "",
+    coverImage: '/avatars/新闻动态/84Recap｜Prof. Yilei Shao & Rector Tshilidzi Marwala：Reimaging the Wealth of Nations_ From Invisible Ha_with_images/images/cover.jpeg',
+  },
   {
     id: "123",
     folder: '83活动预告 _ 智金院院长邵怡蕾教授受邀出席第30届亚太知识发现与数据挖掘会议（PAKDD 2026）并发表演讲_with_images',
